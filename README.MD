@@ -3,6 +3,16 @@
 ## INSTRUCTION
 wait for me
 
+## DESCRIPTION
+*Electronic application is a sales management platform. There are many extended functions that inherit Shop_app and build more sales invoices* <br>
+**Extended functions include**<br>
+   - Export jasper(pdf,word,html,xml), excel reports
+   - Generate and scan QR codes
+   - Send email register and forgot password
+   - Save time management code [see](./src/main/resources/data/randomCode.properties) or [view code](./src/main/java/shop/services/staticControl/RandomCode.java)
+   - Statistical data with JFreechart
+   - Encrypt the password in the database
+
 ## GUIDE
 - setup java > [setup jdk and maven](https://youtu.be/vm3W-KsFnrE)<br>
 - setup java > [setup jdk and maven](https://youtu.be/vm3W-KsFnrE)<br>
