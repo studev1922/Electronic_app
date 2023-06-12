@@ -37,7 +37,7 @@ public class pnl_productStatistic extends javax.swing.JPanel {
         cbx_sort = new javax.swing.JComboBox<>();
         btn_filter = new javax.swing.JButton();
         lbl_subtitle4 = new javax.swing.JLabel();
-        lbl_maxQty = new shop.views.custom.JLabel2();
+        lbl_maxQty = new javax.swing.JLabel();
         srp_QtyAndPrice = new javax.swing.JScrollPane();
         lyp_QtyAndPrice = new javax.swing.JLayeredPane();
 
@@ -101,7 +101,6 @@ public class pnl_productStatistic extends javax.swing.JPanel {
         lbl_maxQty.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_maxQty.setText("0");
         lbl_maxQty.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        lbl_maxQty.setOutLine(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout pnl_filterLayout = new javax.swing.GroupLayout(pnl_filter);
         pnl_filter.setLayout(pnl_filterLayout);
@@ -207,7 +206,7 @@ public class pnl_productStatistic extends javax.swing.JPanel {
     private javax.swing.JComboBox<FilterProduct.SORT> cbx_sort;
     private com.toedter.calendar.JDateChooser dcs_end;
     private com.toedter.calendar.JDateChooser dcs_start;
-    private shop.views.custom.JLabel2 lbl_maxQty;
+    private javax.swing.JLabel lbl_maxQty;
     private javax.swing.JLabel lbl_subtitle;
     private javax.swing.JLabel lbl_subtitle1;
     private javax.swing.JLabel lbl_subtitle2;

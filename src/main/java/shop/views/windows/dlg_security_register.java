@@ -32,20 +32,20 @@ public class dlg_security_register extends javax.swing.JDialog implements Confir
     private void initComponents() {
 
         btn_groupRole = new javax.swing.ButtonGroup();
-        lbl_heading = new shop.views.custom.JLabel2();
+        lbl_heading = new javax.swing.JLabel();
         pnl_detail = new javax.swing.JPanel();
-        lbl_textfield = new shop.views.custom.JLabel2();
+        lbl_textfield = new javax.swing.JLabel();
         txt_username = new javax.swing.JTextField();
-        lbl_textfield1 = new shop.views.custom.JLabel2();
+        lbl_textfield1 = new javax.swing.JLabel();
         txt_password = new javax.swing.JPasswordField();
-        lbl_textfield3 = new shop.views.custom.JLabel2();
+        lbl_textfield3 = new javax.swing.JLabel();
         txt_email = new javax.swing.JTextField();
-        lbl_textfield4 = new shop.views.custom.JLabel2();
+        lbl_textfield4 = new javax.swing.JLabel();
         txt_name = new javax.swing.JTextField();
-        lbl_textfield5 = new shop.views.custom.JLabel2();
+        lbl_textfield5 = new javax.swing.JLabel();
         rdo_seller = new javax.swing.JRadioButton();
         rdo_buyer = new javax.swing.JRadioButton();
-        lbl_image = new shop.views.custom.JLabel2();
+        lbl_image = new javax.swing.JLabel();
         btn_login = new javax.swing.JButton();
         btn_register = new javax.swing.JButton();
         lbl_forForgotPass = new javax.swing.JLabel();
@@ -59,7 +59,6 @@ public class dlg_security_register extends javax.swing.JDialog implements Confir
         lbl_heading.setText("ĐĂNG KÝ TÀI KHOẢN");
         lbl_heading.setFocusable(false);
         lbl_heading.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        lbl_heading.setOutLine(new java.awt.Color(51, 51, 51));
 
         lbl_textfield.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         lbl_textfield.setForeground(new java.awt.Color(255, 153, 51));
@@ -68,7 +67,6 @@ public class dlg_security_register extends javax.swing.JDialog implements Confir
         lbl_textfield.setToolTipText("");
         lbl_textfield.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_textfield.setOutLine(new java.awt.Color(255, 255, 255));
         lbl_textfield.setVerifyInputWhenFocusTarget(false);
 
         txt_username.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
@@ -81,7 +79,6 @@ public class dlg_security_register extends javax.swing.JDialog implements Confir
         lbl_textfield1.setToolTipText("password chỉ có thêm tạo mới, không được cập nhật");
         lbl_textfield1.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_textfield1.setOutLine(new java.awt.Color(255, 255, 255));
         lbl_textfield1.setVerifyInputWhenFocusTarget(false);
 
         txt_password.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -94,7 +91,6 @@ public class dlg_security_register extends javax.swing.JDialog implements Confir
         lbl_textfield3.setToolTipText("");
         lbl_textfield3.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_textfield3.setOutLine(new java.awt.Color(255, 255, 255));
         lbl_textfield3.setVerifyInputWhenFocusTarget(false);
 
         txt_email.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
@@ -107,7 +103,6 @@ public class dlg_security_register extends javax.swing.JDialog implements Confir
         lbl_textfield4.setToolTipText("");
         lbl_textfield4.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_textfield4.setOutLine(new java.awt.Color(255, 255, 255));
         lbl_textfield4.setVerifyInputWhenFocusTarget(false);
 
         txt_name.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
@@ -120,7 +115,6 @@ public class dlg_security_register extends javax.swing.JDialog implements Confir
         lbl_textfield5.setToolTipText("");
         lbl_textfield5.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_textfield5.setOutLine(new java.awt.Color(255, 255, 255));
         lbl_textfield5.setVerifyInputWhenFocusTarget(false);
 
         btn_groupRole.add(rdo_seller);
@@ -202,7 +196,6 @@ public class dlg_security_register extends javax.swing.JDialog implements Confir
         lbl_image.setText("default.png");
         lbl_image.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_image.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_image.setOutLine(new java.awt.Color(255, 255, 255));
         lbl_image.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         btn_login.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -309,13 +302,13 @@ public class dlg_security_register extends javax.swing.JDialog implements Confir
     private javax.swing.JButton btn_login;
     private javax.swing.JButton btn_register;
     private javax.swing.JLabel lbl_forForgotPass;
-    private shop.views.custom.JLabel2 lbl_heading;
-    private shop.views.custom.JLabel2 lbl_image;
-    private shop.views.custom.JLabel2 lbl_textfield;
-    private shop.views.custom.JLabel2 lbl_textfield1;
-    private shop.views.custom.JLabel2 lbl_textfield3;
-    private shop.views.custom.JLabel2 lbl_textfield4;
-    private shop.views.custom.JLabel2 lbl_textfield5;
+    private javax.swing.JLabel lbl_heading;
+    private javax.swing.JLabel lbl_image;
+    private javax.swing.JLabel lbl_textfield;
+    private javax.swing.JLabel lbl_textfield1;
+    private javax.swing.JLabel lbl_textfield3;
+    private javax.swing.JLabel lbl_textfield4;
+    private javax.swing.JLabel lbl_textfield5;
     private javax.swing.JPanel pnl_detail;
     private javax.swing.JRadioButton rdo_buyer;
     private javax.swing.JRadioButton rdo_seller;

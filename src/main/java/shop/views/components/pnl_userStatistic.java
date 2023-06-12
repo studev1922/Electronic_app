@@ -39,7 +39,7 @@ public class pnl_userStatistic extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl_heading_t1 = new shop.views.custom.JLabel2();
+        lbl_heading_t1 = new javax.swing.JLabel();
         lyp_t1_user = new javax.swing.JLayeredPane();
         lyp_t1_cate = new javax.swing.JLayeredPane();
         cbx_user = new javax.swing.JComboBox<>();
@@ -51,7 +51,6 @@ public class pnl_userStatistic extends javax.swing.JPanel {
         lbl_heading_t1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_heading_t1.setText("PHÂN LOẠI SẢN PHẨM VÀ NGƯỜI DÙNG ĐĂNG TẢI");
         lbl_heading_t1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        lbl_heading_t1.setOutLine(new java.awt.Color(0, 0, 0));
 
         lyp_t1_user.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -178,7 +177,7 @@ public class pnl_userStatistic extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<Object> cbx_cate;
     private javax.swing.JComboBox<Object> cbx_user;
-    private shop.views.custom.JLabel2 lbl_heading_t1;
+    private javax.swing.JLabel lbl_heading_t1;
     private javax.swing.JLayeredPane lyp_t1_cate;
     private javax.swing.JLayeredPane lyp_t1_groupCate;
     private javax.swing.JLayeredPane lyp_t1_groupUser;

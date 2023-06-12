@@ -20,13 +20,13 @@ public class dlg_security_forgotPass extends javax.swing.JDialog implements Conf
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl_heading = new shop.views.custom.JLabel2();
+        lbl_heading = new javax.swing.JLabel();
         btn_reset = new javax.swing.JButton();
         btn_forgot = new javax.swing.JButton();
         lbl_forForgotPass = new javax.swing.JLabel();
-        lbl_textfield4 = new shop.views.custom.JLabel2();
+        lbl_textfield4 = new javax.swing.JLabel();
         txt_email = new javax.swing.JTextField();
-        lbl_username = new shop.views.custom.JLabel2();
+        lbl_username = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Quên mật khẩu");
@@ -41,7 +41,6 @@ public class dlg_security_forgotPass extends javax.swing.JDialog implements Conf
         lbl_heading.setText("QUÊN MẬT KHẨU");
         lbl_heading.setFocusable(false);
         lbl_heading.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        lbl_heading.setOutLine(new java.awt.Color(51, 51, 51));
 
         btn_reset.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btn_reset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/loading.png"))); // NOI18N
@@ -79,7 +78,6 @@ public class dlg_security_forgotPass extends javax.swing.JDialog implements Conf
         lbl_textfield4.setToolTipText("");
         lbl_textfield4.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_textfield4.setOutLine(new java.awt.Color(255, 255, 255));
         lbl_textfield4.setVerifyInputWhenFocusTarget(false);
 
         txt_email.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
@@ -98,7 +96,6 @@ public class dlg_security_forgotPass extends javax.swing.JDialog implements Conf
         lbl_username.setToolTipText("");
         lbl_username.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_username.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_username.setOutLine(new java.awt.Color(255, 255, 255));
         lbl_username.setVerifyInputWhenFocusTarget(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -179,9 +176,9 @@ public class dlg_security_forgotPass extends javax.swing.JDialog implements Conf
     private javax.swing.JButton btn_forgot;
     private javax.swing.JButton btn_reset;
     private javax.swing.JLabel lbl_forForgotPass;
-    private shop.views.custom.JLabel2 lbl_heading;
-    private shop.views.custom.JLabel2 lbl_textfield4;
-    private shop.views.custom.JLabel2 lbl_username;
+    private javax.swing.JLabel lbl_heading;
+    private javax.swing.JLabel lbl_textfield4;
+    private javax.swing.JLabel lbl_username;
     private javax.swing.JTextField txt_email;
     // End of variables declaration//GEN-END:variables
 

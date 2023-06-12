@@ -58,7 +58,7 @@ public class dlg_order extends javax.swing.JDialog {
 
         tbp = new javax.swing.JTabbedPane();
         pnl_statistic = new javax.swing.JPanel();
-        jLabel22 = new shop.views.custom.JLabel2();
+        jLabel22 = new javax.swing.JLabel();
         tbp_statistic = new javax.swing.JTabbedPane();
         lyp_sellChart = new javax.swing.JLayeredPane();
         lyp_enueChart = new javax.swing.JLayeredPane();
@@ -81,7 +81,7 @@ public class dlg_order extends javax.swing.JDialog {
         lbl_minQty = new javax.swing.JLabel();
         spn_page = new com.toedter.components.JSpinField();
         lyp_orders = new javax.swing.JLayeredPane();
-        jLabel21 = new shop.views.custom.JLabel2();
+        jLabel21 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         spn_orderSize = new javax.swing.JSpinner();
         jSeparator1 = new javax.swing.JSeparator();
@@ -103,7 +103,7 @@ public class dlg_order extends javax.swing.JDialog {
         btn_reportJasper1 = new javax.swing.JButton();
         scr_listOrder = new javax.swing.JScrollPane();
         lyp_details = new javax.swing.JLayeredPane();
-        jLabel23 = new shop.views.custom.JLabel2();
+        jLabel23 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         spn_orid = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
@@ -120,10 +120,10 @@ public class dlg_order extends javax.swing.JDialog {
         jLabel6 = new javax.swing.JLabel();
         lbl_staff = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        btn_fisrt = new shop.views.custom.JLabel2();
-        btn_previos = new shop.views.custom.JLabel2();
-        btn_next = new shop.views.custom.JLabel2();
-        btn_last = new shop.views.custom.JLabel2();
+        btn_fisrt = new javax.swing.JLabel();
+        btn_previos = new javax.swing.JLabel();
+        btn_next = new javax.swing.JLabel();
+        btn_last = new javax.swing.JLabel();
         scr_listDetail = new javax.swing.JScrollPane();
         btn_reportJasper = new javax.swing.JButton();
 
@@ -141,7 +141,6 @@ public class dlg_order extends javax.swing.JDialog {
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setText("THỐNG KÊ DỮ LIỆU HÓA ĐƠN");
         jLabel22.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel22.setOutLine(new java.awt.Color(255, 255, 255));
 
         lyp_sellChart.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         lyp_sellChart.setLayout(new java.awt.GridLayout(1, 0));
@@ -342,7 +341,6 @@ public class dlg_order extends javax.swing.JDialog {
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("DANH SÁCH HÓA ĐƠN");
         jLabel21.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel21.setOutLine(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 3, 1, new java.awt.Color(255, 153, 0)), "Thông tin", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 14), new java.awt.Color(255, 153, 0))); // NOI18N
 
@@ -551,7 +549,6 @@ public class dlg_order extends javax.swing.JDialog {
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel23.setText("CHI TIẾT HÓA ĐƠN");
         jLabel23.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel23.setOutLine(new java.awt.Color(255, 255, 255));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 3, 1, new java.awt.Color(255, 153, 0)), "Quản lý", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 14), new java.awt.Color(255, 153, 0))); // NOI18N
 
@@ -678,7 +675,6 @@ public class dlg_order extends javax.swing.JDialog {
         btn_fisrt.setText("Đầu tiên");
         btn_fisrt.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btn_fisrt.setIconTextGap(5);
-        btn_fisrt.setOutLine(new java.awt.Color(0, 0, 0));
         btn_fisrt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_fisrtMouseClicked(evt);
@@ -693,7 +689,6 @@ public class dlg_order extends javax.swing.JDialog {
         btn_previos.setText("Trước đó");
         btn_previos.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btn_previos.setIconTextGap(5);
-        btn_previos.setOutLine(new java.awt.Color(0, 0, 0));
         btn_previos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_previosMouseClicked(evt);
@@ -708,7 +703,6 @@ public class dlg_order extends javax.swing.JDialog {
         btn_next.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btn_next.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         btn_next.setIconTextGap(5);
-        btn_next.setOutLine(new java.awt.Color(0, 0, 0));
         btn_next.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_nextMouseClicked(evt);
@@ -723,7 +717,6 @@ public class dlg_order extends javax.swing.JDialog {
         btn_last.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btn_last.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         btn_last.setIconTextGap(5);
-        btn_last.setOutLine(new java.awt.Color(0, 0, 0));
         btn_last.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_lastMouseClicked(evt);
@@ -862,10 +855,10 @@ public class dlg_order extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_exportOrders;
-    private shop.views.custom.JLabel2 btn_fisrt;
-    private shop.views.custom.JLabel2 btn_last;
-    private shop.views.custom.JLabel2 btn_next;
-    private shop.views.custom.JLabel2 btn_previos;
+    private javax.swing.JLabel btn_fisrt;
+    private javax.swing.JLabel btn_last;
+    private javax.swing.JLabel btn_next;
+    private javax.swing.JLabel btn_previos;
     private javax.swing.JButton btn_reportJasper;
     private javax.swing.JButton btn_reportJasper1;
     private javax.swing.JButton btn_sellFilter;
@@ -885,9 +878,9 @@ public class dlg_order extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private shop.views.custom.JLabel2 jLabel21;
-    private shop.views.custom.JLabel2 jLabel22;
-    private shop.views.custom.JLabel2 jLabel23;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

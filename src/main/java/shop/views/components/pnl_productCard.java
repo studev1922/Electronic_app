@@ -38,7 +38,7 @@ public class pnl_productCard extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl_subject = new shop.views.custom.JLabel2();
+        lbl_subject = new javax.swing.JLabel();
         lbl_image = new javax.swing.JLabel();
         pnl_bottom = new javax.swing.JPanel();
         lbl_price = new javax.swing.JLabel();
@@ -99,7 +99,7 @@ public class pnl_productCard extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel lbl_image;
     private javax.swing.JLabel lbl_price;
-    private shop.views.custom.JLabel2 lbl_subject;
+    private javax.swing.JLabel lbl_subject;
     private javax.swing.JPanel pnl_bottom;
     // End of variables declaration//GEN-END:variables
 

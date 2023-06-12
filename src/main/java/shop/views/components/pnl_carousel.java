@@ -18,7 +18,7 @@ public class pnl_carousel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl_heading = new shop.views.custom.JLabel2();
+        lbl_heading = new javax.swing.JLabel();
         lbl_image = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 204, 204));
@@ -40,7 +40,7 @@ public class pnl_carousel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private shop.views.custom.JLabel2 lbl_heading;
+    private javax.swing.JLabel lbl_heading;
     private javax.swing.JLabel lbl_image;
     // End of variables declaration//GEN-END:variables
     private final int B_DELAY = Integer.parseInt(env.PROPERTIES.getProperty("app.carousel.bdelay", "5000"));
@@ -55,7 +55,6 @@ public class pnl_carousel extends javax.swing.JPanel {
         int hsize = headings.length - 1;
 
         // set label heading
-        lbl_heading.setOutLine(Color.YELLOW);
         viewHeading = new Timer(H_DELAY, e -> {
             int at = (int) (Math.random() * hsize);
             lbl_heading.setText(headings[at]);

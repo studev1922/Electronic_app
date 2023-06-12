@@ -38,17 +38,17 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl_subject = new shop.views.custom.JLabel2();
+        lbl_subject = new javax.swing.JLabel();
         pnl_img = new javax.swing.JPanel();
-        lbl_image = new shop.views.custom.JLabel2();
+        lbl_image = new javax.swing.JLabel();
         btn_export_excel = new javax.swing.JButton();
         btn_clear = new javax.swing.JButton();
         pnl_info = new javax.swing.JPanel();
-        lbl_textfield = new shop.views.custom.JLabel2();
-        lbl_textfield1 = new shop.views.custom.JLabel2();
-        lbl_textfield2 = new shop.views.custom.JLabel2();
-        lbl_textfield3 = new shop.views.custom.JLabel2();
-        lbl_textfield4 = new shop.views.custom.JLabel2();
+        lbl_textfield = new javax.swing.JLabel();
+        lbl_textfield1 = new javax.swing.JLabel();
+        lbl_textfield2 = new javax.swing.JLabel();
+        lbl_textfield3 = new javax.swing.JLabel();
+        lbl_textfield4 = new javax.swing.JLabel();
         txt_username = new javax.swing.JTextField();
         txt_password = new javax.swing.JPasswordField();
         txt_email = new javax.swing.JTextField();
@@ -57,17 +57,17 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         dcs_regTime = new com.toedter.calendar.JDateChooser();
         pnl_role = new javax.swing.JPanel();
         scr_products = new javax.swing.JScrollPane();
-        lbl_textfield5 = new shop.views.custom.JLabel2();
-        lbl_quantity = new shop.views.custom.JLabel2();
+        lbl_textfield5 = new javax.swing.JLabel();
+        lbl_quantity = new javax.swing.JLabel();
         pnl_control = new javax.swing.JPanel();
-        btn_read = new shop.views.custom.JLabel2();
-        btn_insert = new shop.views.custom.JLabel2();
-        btn_previos = new shop.views.custom.JLabel2();
-        btn_next = new shop.views.custom.JLabel2();
-        btn_update = new shop.views.custom.JLabel2();
-        btn_delete = new shop.views.custom.JLabel2();
-        btn_fisrt = new shop.views.custom.JLabel2();
-        btn_last = new shop.views.custom.JLabel2();
+        btn_read = new javax.swing.JLabel();
+        btn_insert = new javax.swing.JLabel();
+        btn_previos = new javax.swing.JLabel();
+        btn_next = new javax.swing.JLabel();
+        btn_update = new javax.swing.JLabel();
+        btn_delete = new javax.swing.JLabel();
+        btn_fisrt = new javax.swing.JLabel();
+        btn_last = new javax.swing.JLabel();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -76,7 +76,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         lbl_subject.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_subject.setText("user's subject");
         lbl_subject.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
-        lbl_subject.setOutLine(new java.awt.Color(255, 255, 255));
         add(lbl_subject, java.awt.BorderLayout.PAGE_START);
 
         lbl_image.setForeground(new java.awt.Color(255, 153, 51));
@@ -85,7 +84,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         lbl_image.setText("default.png");
         lbl_image.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_image.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_image.setOutLine(new java.awt.Color(255, 255, 255));
         lbl_image.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         btn_export_excel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -136,7 +134,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         lbl_textfield.setToolTipText("");
         lbl_textfield.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_textfield.setOutLine(new java.awt.Color(255, 255, 255));
         lbl_textfield.setVerifyInputWhenFocusTarget(false);
 
         lbl_textfield1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
@@ -146,7 +143,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         lbl_textfield1.setToolTipText("password chỉ có thêm tạo mới, không được cập nhật");
         lbl_textfield1.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_textfield1.setOutLine(new java.awt.Color(255, 255, 255));
         lbl_textfield1.setVerifyInputWhenFocusTarget(false);
 
         lbl_textfield2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
@@ -156,7 +152,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         lbl_textfield2.setToolTipText("");
         lbl_textfield2.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_textfield2.setOutLine(new java.awt.Color(255, 255, 255));
         lbl_textfield2.setVerifyInputWhenFocusTarget(false);
 
         lbl_textfield3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
@@ -166,7 +161,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         lbl_textfield3.setToolTipText("");
         lbl_textfield3.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_textfield3.setOutLine(new java.awt.Color(255, 255, 255));
         lbl_textfield3.setVerifyInputWhenFocusTarget(false);
 
         lbl_textfield4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
@@ -176,7 +170,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         lbl_textfield4.setToolTipText("");
         lbl_textfield4.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_textfield4.setOutLine(new java.awt.Color(255, 255, 255));
         lbl_textfield4.setVerifyInputWhenFocusTarget(false);
 
         txt_username.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
@@ -207,7 +200,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         lbl_textfield5.setToolTipText("");
         lbl_textfield5.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_textfield5.setOutLine(new java.awt.Color(255, 255, 255));
         lbl_textfield5.setVerifyInputWhenFocusTarget(false);
 
         lbl_quantity.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
@@ -217,7 +209,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         lbl_quantity.setToolTipText("");
         lbl_quantity.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_quantity.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_quantity.setOutLine(new java.awt.Color(0, 0, 0));
         lbl_quantity.setVerifyInputWhenFocusTarget(false);
 
         javax.swing.GroupLayout pnl_infoLayout = new javax.swing.GroupLayout(pnl_info);
@@ -300,7 +291,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         btn_read.setText("Thông tin");
         btn_read.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btn_read.setIconTextGap(5);
-        btn_read.setOutLine(new java.awt.Color(0, 0, 0));
         btn_read.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_readMouseClicked(evt);
@@ -315,7 +305,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         btn_insert.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btn_insert.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         btn_insert.setIconTextGap(5);
-        btn_insert.setOutLine(new java.awt.Color(0, 0, 0));
         btn_insert.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_insertMouseClicked(evt);
@@ -330,7 +319,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         btn_previos.setText("Trước đó");
         btn_previos.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btn_previos.setIconTextGap(5);
-        btn_previos.setOutLine(new java.awt.Color(0, 0, 0));
         btn_previos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_previosMouseClicked(evt);
@@ -345,7 +333,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         btn_next.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btn_next.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         btn_next.setIconTextGap(5);
-        btn_next.setOutLine(new java.awt.Color(0, 0, 0));
         btn_next.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_nextMouseClicked(evt);
@@ -361,7 +348,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         btn_update.setToolTipText("password sẽ không được update");
         btn_update.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btn_update.setIconTextGap(5);
-        btn_update.setOutLine(new java.awt.Color(0, 0, 0));
         btn_update.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_updateMouseClicked(evt);
@@ -376,7 +362,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         btn_delete.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btn_delete.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         btn_delete.setIconTextGap(5);
-        btn_delete.setOutLine(new java.awt.Color(0, 0, 0));
         btn_delete.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_deleteMouseClicked(evt);
@@ -391,7 +376,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         btn_fisrt.setText("Đầu tiên");
         btn_fisrt.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btn_fisrt.setIconTextGap(5);
-        btn_fisrt.setOutLine(new java.awt.Color(0, 0, 0));
         btn_fisrt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_fisrtMouseClicked(evt);
@@ -406,7 +390,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         btn_last.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btn_last.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         btn_last.setIconTextGap(5);
-        btn_last.setOutLine(new java.awt.Color(0, 0, 0));
         btn_last.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_lastMouseClicked(evt);
@@ -465,26 +448,26 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_clear;
-    private shop.views.custom.JLabel2 btn_delete;
+    private javax.swing.JLabel btn_delete;
     private javax.swing.JButton btn_export_excel;
-    private shop.views.custom.JLabel2 btn_fisrt;
-    private shop.views.custom.JLabel2 btn_insert;
-    private shop.views.custom.JLabel2 btn_last;
-    private shop.views.custom.JLabel2 btn_next;
-    private shop.views.custom.JLabel2 btn_previos;
-    private shop.views.custom.JLabel2 btn_read;
-    private shop.views.custom.JLabel2 btn_update;
+    private javax.swing.JLabel btn_fisrt;
+    private javax.swing.JLabel btn_insert;
+    private javax.swing.JLabel btn_last;
+    private javax.swing.JLabel btn_next;
+    private javax.swing.JLabel btn_previos;
+    private javax.swing.JLabel btn_read;
+    private javax.swing.JLabel btn_update;
     private javax.swing.JCheckBox cb_isActive;
     private com.toedter.calendar.JDateChooser dcs_regTime;
-    private shop.views.custom.JLabel2 lbl_image;
-    private shop.views.custom.JLabel2 lbl_quantity;
-    private shop.views.custom.JLabel2 lbl_subject;
-    private shop.views.custom.JLabel2 lbl_textfield;
-    private shop.views.custom.JLabel2 lbl_textfield1;
-    private shop.views.custom.JLabel2 lbl_textfield2;
-    private shop.views.custom.JLabel2 lbl_textfield3;
-    private shop.views.custom.JLabel2 lbl_textfield4;
-    private shop.views.custom.JLabel2 lbl_textfield5;
+    private javax.swing.JLabel lbl_image;
+    private javax.swing.JLabel lbl_quantity;
+    private javax.swing.JLabel lbl_subject;
+    private javax.swing.JLabel lbl_textfield;
+    private javax.swing.JLabel lbl_textfield1;
+    private javax.swing.JLabel lbl_textfield2;
+    private javax.swing.JLabel lbl_textfield3;
+    private javax.swing.JLabel lbl_textfield4;
+    private javax.swing.JLabel lbl_textfield5;
     private javax.swing.JPanel pnl_control;
     private javax.swing.JPanel pnl_img;
     private javax.swing.JPanel pnl_info;

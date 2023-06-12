@@ -30,17 +30,17 @@ public class dlg_activeProduct extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl_heading = new shop.views.custom.JLabel2();
+        lbl_heading = new javax.swing.JLabel();
         scr_list = new javax.swing.JScrollPane();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        lbl_sum = new shop.views.custom.JLabel2();
-        lbl_isActive = new shop.views.custom.JLabel2();
-        lbl_noActive = new shop.views.custom.JLabel2();
+        lbl_sum = new javax.swing.JLabel();
+        lbl_isActive = new javax.swing.JLabel();
+        lbl_noActive = new javax.swing.JLabel();
         btn_Update = new javax.swing.JButton();
         lbl_forChange = new javax.swing.JLabel();
-        lbl_change = new shop.views.custom.JLabel2();
+        lbl_change = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("DUYỆT SẢN PHẨM");
@@ -54,7 +54,6 @@ public class dlg_activeProduct extends javax.swing.JDialog {
         lbl_heading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_heading.setText("QUẢN LÝ CHẠY SẢN PHẨM");
         lbl_heading.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        lbl_heading.setOutLine(new java.awt.Color(0, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -73,21 +72,18 @@ public class dlg_activeProduct extends javax.swing.JDialog {
         lbl_sum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_sum.setText("0");
         lbl_sum.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        lbl_sum.setOutLine(new java.awt.Color(0, 0, 0));
 
         lbl_isActive.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         lbl_isActive.setForeground(new java.awt.Color(255, 153, 0));
         lbl_isActive.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_isActive.setText("0");
         lbl_isActive.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        lbl_isActive.setOutLine(new java.awt.Color(0, 0, 0));
 
         lbl_noActive.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         lbl_noActive.setForeground(new java.awt.Color(255, 153, 0));
         lbl_noActive.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_noActive.setText("0");
         lbl_noActive.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        lbl_noActive.setOutLine(new java.awt.Color(0, 0, 0));
 
         btn_Update.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
         btn_Update.setForeground(new java.awt.Color(51, 204, 255));
@@ -108,7 +104,6 @@ public class dlg_activeProduct extends javax.swing.JDialog {
         lbl_change.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_change.setText("0");
         lbl_change.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        lbl_change.setOutLine(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -173,12 +168,12 @@ public class dlg_activeProduct extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private shop.views.custom.JLabel2 lbl_change;
+    private javax.swing.JLabel lbl_change;
     private javax.swing.JLabel lbl_forChange;
-    private shop.views.custom.JLabel2 lbl_heading;
-    private shop.views.custom.JLabel2 lbl_isActive;
-    private shop.views.custom.JLabel2 lbl_noActive;
-    private shop.views.custom.JLabel2 lbl_sum;
+    private javax.swing.JLabel lbl_heading;
+    private javax.swing.JLabel lbl_isActive;
+    private javax.swing.JLabel lbl_noActive;
+    private javax.swing.JLabel lbl_sum;
     private javax.swing.JScrollPane scr_list;
     // End of variables declaration//GEN-END:variables
     private final Map<Long, Integer> mapActive = new HashMap<>();

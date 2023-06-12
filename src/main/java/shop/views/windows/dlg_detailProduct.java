@@ -32,8 +32,8 @@ public class dlg_detailProduct extends javax.swing.JDialog {
 
         pnl_box = new javax.swing.JPanel();
         pnl_top = new javax.swing.JPanel();
-        lbl_id = new shop.views.custom.JLabel2();
-        lbl_subject = new shop.views.custom.JLabel2();
+        lbl_id = new javax.swing.JLabel();
+        lbl_subject = new javax.swing.JLabel();
         pnl_info = new javax.swing.JPanel();
         pnl_groupImg = new javax.swing.JPanel();
         lbl_qrCode = new javax.swing.JLabel();
@@ -61,14 +61,12 @@ public class dlg_detailProduct extends javax.swing.JDialog {
         lbl_id.setForeground(new java.awt.Color(0, 204, 204));
         lbl_id.setText("product id");
         lbl_id.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        lbl_id.setOutLine(new java.awt.Color(255, 255, 51));
 
         lbl_subject.setForeground(new java.awt.Color(255, 102, 0));
         lbl_subject.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_subject.setText("product name");
         lbl_subject.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         lbl_subject.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_subject.setOutLine(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout pnl_topLayout = new javax.swing.GroupLayout(pnl_top);
         pnl_top.setLayout(pnl_topLayout);
@@ -248,12 +246,12 @@ public class dlg_detailProduct extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel lbl_cateImg;
     private javax.swing.JLabel lbl_cateName;
-    private shop.views.custom.JLabel2 lbl_id;
+    private javax.swing.JLabel lbl_id;
     private javax.swing.JLabel lbl_price;
     private javax.swing.JLabel lbl_productImg;
     private javax.swing.JLabel lbl_qrCode;
     private javax.swing.JLabel lbl_quantity;
-    private shop.views.custom.JLabel2 lbl_subject;
+    private javax.swing.JLabel lbl_subject;
     private javax.swing.JLabel lbl_userImg;
     private javax.swing.JPanel pnl_box;
     private javax.swing.JPanel pnl_groupImg;

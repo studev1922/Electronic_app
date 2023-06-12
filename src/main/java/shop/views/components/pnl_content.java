@@ -31,8 +31,8 @@ public class pnl_content extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl_image = new shop.views.custom.JLabel2();
-        lbl_subject = new shop.views.custom.JLabel2();
+        lbl_image = new javax.swing.JLabel();
+        lbl_subject = new javax.swing.JLabel();
         lbl_barcode = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         lbl_price = new javax.swing.JLabel();
@@ -55,7 +55,6 @@ public class pnl_content extends javax.swing.JPanel {
         lbl_image.setText("default.png");
         lbl_image.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_image.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lbl_image.setOutLine(new java.awt.Color(255, 255, 255));
         lbl_image.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         lbl_subject.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 3, 0, new java.awt.Color(255, 153, 51)));
@@ -63,7 +62,6 @@ public class pnl_content extends javax.swing.JPanel {
         lbl_subject.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_subject.setText("product's name");
         lbl_subject.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
-        lbl_subject.setOutLine(new java.awt.Color(255, 255, 255));
 
         lbl_barcode.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         lbl_barcode.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -196,9 +194,9 @@ public class pnl_content extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel lbl_barcode;
-    private shop.views.custom.JLabel2 lbl_image;
+    private javax.swing.JLabel lbl_image;
     private javax.swing.JLabel lbl_price;
-    private shop.views.custom.JLabel2 lbl_subject;
+    private javax.swing.JLabel lbl_subject;
     private javax.swing.JLabel lbl_total;
     private com.toedter.components.JSpinField txt_quantity;
     // End of variables declaration//GEN-END:variables

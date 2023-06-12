@@ -28,22 +28,21 @@ public class pnl_categoryStatistic extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl_heading_t1 = new shop.views.custom.JLabel2();
-        jLabel21 = new shop.views.custom.JLabel2();
-        jLabel24 = new shop.views.custom.JLabel2();
-        lbl_sum = new shop.views.custom.JLabel2();
-        lbl_hasProduct = new shop.views.custom.JLabel2();
+        lbl_heading_t1 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        lbl_sum = new javax.swing.JLabel();
+        lbl_hasProduct = new javax.swing.JLabel();
         lyp_statistic = new javax.swing.JLayeredPane();
         txt_min = new com.toedter.components.JSpinField();
         txt_max = new com.toedter.components.JSpinField();
-        jLabel22 = new shop.views.custom.JLabel2();
-        jLabel23 = new shop.views.custom.JLabel2();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
 
         lbl_heading_t1.setForeground(new java.awt.Color(255, 153, 0));
         lbl_heading_t1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_heading_t1.setText("THỐNG KÊ PHÂN LOẠI SẢN PHẨM");
         lbl_heading_t1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        lbl_heading_t1.setOutLine(new java.awt.Color(0, 0, 0));
 
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel21.setText("Tổng");
@@ -57,14 +56,12 @@ public class pnl_categoryStatistic extends javax.swing.JPanel {
         lbl_sum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_sum.setText("0");
         lbl_sum.setFont(new java.awt.Font("Times New Roman", 3, 16)); // NOI18N
-        lbl_sum.setOutLine(new java.awt.Color(0, 0, 0));
 
         lbl_hasProduct.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         lbl_hasProduct.setForeground(new java.awt.Color(255, 153, 0));
         lbl_hasProduct.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_hasProduct.setText("0");
         lbl_hasProduct.setFont(new java.awt.Font("Times New Roman", 3, 16)); // NOI18N
-        lbl_hasProduct.setOutLine(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout lyp_statisticLayout = new javax.swing.GroupLayout(lyp_statistic);
         lyp_statistic.setLayout(lyp_statisticLayout);
@@ -172,13 +169,13 @@ public class pnl_categoryStatistic extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private shop.views.custom.JLabel2 jLabel21;
-    private shop.views.custom.JLabel2 jLabel22;
-    private shop.views.custom.JLabel2 jLabel23;
-    private shop.views.custom.JLabel2 jLabel24;
-    private shop.views.custom.JLabel2 lbl_hasProduct;
-    private shop.views.custom.JLabel2 lbl_heading_t1;
-    private shop.views.custom.JLabel2 lbl_sum;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel lbl_hasProduct;
+    private javax.swing.JLabel lbl_heading_t1;
+    private javax.swing.JLabel lbl_sum;
     private javax.swing.JLayeredPane lyp_statistic;
     private com.toedter.components.JSpinField txt_max;
     private com.toedter.components.JSpinField txt_min;

@@ -19,7 +19,7 @@ public class dlg_security_login extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl_heading = new shop.views.custom.JLabel2();
+        lbl_heading = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txt_uid = new javax.swing.JTextField();
@@ -36,7 +36,6 @@ public class dlg_security_login extends javax.swing.JDialog {
         lbl_heading.setText("ĐĂNG NHẬP TÀI KHOẢN");
         lbl_heading.setFocusable(false);
         lbl_heading.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        lbl_heading.setOutLine(new java.awt.Color(51, 51, 51));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 16)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -167,7 +166,7 @@ public class dlg_security_login extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lbl_forForgotPass;
-    private shop.views.custom.JLabel2 lbl_heading;
+    private javax.swing.JLabel lbl_heading;
     private javax.swing.JPasswordField txt_pass;
     private javax.swing.JTextField txt_uid;
     // End of variables declaration//GEN-END:variables

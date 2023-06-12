@@ -17,7 +17,7 @@ public class dlg_orderRoleChooser extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel23 = new shop.views.custom.JLabel2();
+        jLabel23 = new javax.swing.JLabel();
         pnl_control = new javax.swing.JPanel();
         btn_admin = new javax.swing.JButton();
         btn_staff = new javax.swing.JButton();
@@ -32,7 +32,6 @@ public class dlg_orderRoleChooser extends javax.swing.JDialog {
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel23.setText("XEM HÓA ĐƠN THEO");
         jLabel23.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel23.setOutLine(new java.awt.Color(255, 255, 255));
 
         pnl_control.setLayout(new java.awt.GridLayout(0, 3, 3, 3));
 
@@ -93,7 +92,7 @@ public class dlg_orderRoleChooser extends javax.swing.JDialog {
     private javax.swing.JButton btn_buyer;
     private javax.swing.JButton btn_close;
     private javax.swing.JButton btn_staff;
-    private shop.views.custom.JLabel2 jLabel23;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JPanel pnl_control;
     // End of variables declaration//GEN-END:variables
     public AuthAccess.ROLE role;
