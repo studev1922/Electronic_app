@@ -1,5 +1,5 @@
 # ELECTRONIC APP
-[other versions](https://drive.google.com/file/d/1Wti7Rj7rGBDbYWZCxCvyJQbcTh0ObyGZ/view?usp=drive_link)
+[click here to see other versions on the googgle driver](https://drive.google.com/file/d/1Wti7Rj7rGBDbYWZCxCvyJQbcTh0ObyGZ/view?usp=drive_link)
 
 
 ## DESCRIPTION
