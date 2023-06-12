@@ -18,8 +18,8 @@
 <table border style="text-align: center;">
    <tr><th colspan="3" style="text-align: center;">ACCOUNT LOGIN</th></tr>
    <tr><th>username</th><th>password</th><th>role</th></tr>
-   <tr><td>admin</td><td>admin</td><td>ALL</td></tr>
-   <tr><td>staff</td><td>staff</td><td>[STAFF, SELLER, BUYER]</td></tr>
+   <tr><td>admin</td><td>admin</td><td>ADMIN, STAFF, SELLER, BUYER</td></tr>
+   <tr><td>staff</td><td>staff</td><td>STAFF, SELLER, BUYER</td></tr>
    <tr><td>seller1</td><td>seller</td><td>SELLER</td></tr>
    <tr><td>buyer1</td><td>buyer</td><td>BUYER</td></tr>
 </table>
