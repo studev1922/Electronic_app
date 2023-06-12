@@ -15,6 +15,7 @@
 
 
 [Check all accounts in database's scripts](./db_mssql_ELECTRONS.sql#L240)
+
 <table border style="text-align: center;">
    <tr><th colspan="3" style="text-align: center;">ACCOUNT LOGIN</th></tr>
    <tr><th>username</th><th>password</th><th>role</th></tr>
@@ -27,6 +28,7 @@
 
 ## DEMO
 wait for me
+<hr>
 
 ## GUIDE
 - setup java > [setup jdk and maven](https://youtu.be/vm3W-KsFnrE)<br>
