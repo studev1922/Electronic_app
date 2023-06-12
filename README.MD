@@ -1,5 +1,8 @@
 # ELECTRONIC APP
 
+**VIDEO INSTRUCTION AT THE BOTTOM**
+## DEMO ELECTRONIC APP
+
 ## DESCRIPTION
 *Electronic application is a sales management platform. There are many extended functions that inherit Shop_app and build more sales invoices* <br>
 **Extended functions include**<br>
@@ -12,7 +15,7 @@
 
 <hr>
 
-## INSTRUCTION
+## DEMO
 wait for me
 
 ## GUIDE
@@ -136,3 +139,6 @@ mvn exec:java
    </td>
 </tr>
 </table>
+
+## INSTRUCTION
+wait for me
