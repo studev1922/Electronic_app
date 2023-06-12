@@ -7,12 +7,15 @@ import com.google.zxing.qrcode.QRCodeWriter;
 import java.awt.Desktop;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
-import lombok.AllArgsConstructor;
 import net.sf.jasperreports.engine.JREmptyDataSource;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;
@@ -27,6 +30,20 @@ import org.krysalis.barcode4j.output.bitmap.BitmapCanvasProvider;
 import org.krysalis.barcode4j.tools.UnitConv;
 
 public interface util {
+    
+    public static String fetchHTML(String url, String charSet) {
+        URLConnection connection;
+        try {
+            connection = new URL(url).openConnection();
+            try (Scanner scanner = new Scanner(connection.getInputStream(), charSet)) {
+                scanner.useDelimiter("\\Z");
+                return scanner.next();
+            }
+        } catch (IOException e) {
+            System.err.println(e.getMessage());
+            return new StringBuilder("<h3>").append(e.getMessage()).append("</h3>").toString();
+        }
+    }
 
     public static BufferedImage generateQrCode(String text, int width, int height) throws Exception {
         BitMatrix matrix = new QRCodeWriter().encode(text,

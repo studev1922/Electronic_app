@@ -14,13 +14,11 @@ import shop.services.sql.DAOModel;
 import shop.services.staticControl.Message;
 import shop.views.App;
 
-public class dlg_activeProduct extends javax.swing.JDialog {
+public class frame_activeProduct extends javax.swing.JFrame {
 
-    private final App parent;
-
-    public dlg_activeProduct(App parent, boolean modal) {
-        super(parent, modal);
+    public frame_activeProduct(App parent, boolean modal) {
         this.data = new ArrayList<>(DAOModel.PRODUCT.getMap().values());
+        this.setIconImage(parent.getIconImage());
         this.parent = parent;
         initComponents();
         init();
@@ -50,10 +48,10 @@ public class dlg_activeProduct extends javax.swing.JDialog {
             }
         });
 
+        lbl_heading.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lbl_heading.setForeground(new java.awt.Color(255, 153, 0));
         lbl_heading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl_heading.setText("QUẢN LÝ CHẠY SẢN PHẨM");
-        lbl_heading.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lbl_heading.setText("QUẢN LÝ TRUY CẬP SẢN PHẨM");
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -67,23 +65,23 @@ public class dlg_activeProduct extends javax.swing.JDialog {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel3.setText("đóng");
 
-        lbl_sum.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        lbl_sum.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         lbl_sum.setForeground(new java.awt.Color(255, 153, 0));
         lbl_sum.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_sum.setText("0");
-        lbl_sum.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        lbl_sum.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        lbl_isActive.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        lbl_isActive.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         lbl_isActive.setForeground(new java.awt.Color(255, 153, 0));
         lbl_isActive.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_isActive.setText("0");
-        lbl_isActive.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        lbl_isActive.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        lbl_noActive.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        lbl_noActive.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         lbl_noActive.setForeground(new java.awt.Color(255, 153, 0));
         lbl_noActive.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_noActive.setText("0");
-        lbl_noActive.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        lbl_noActive.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         btn_Update.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
         btn_Update.setForeground(new java.awt.Color(51, 204, 255));
@@ -99,11 +97,11 @@ public class dlg_activeProduct extends javax.swing.JDialog {
         lbl_forChange.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lbl_forChange.setText("thay đổi");
 
-        lbl_change.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        lbl_change.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         lbl_change.setForeground(new java.awt.Color(255, 153, 0));
         lbl_change.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_change.setText("0");
-        lbl_change.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        lbl_change.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -178,6 +176,7 @@ public class dlg_activeProduct extends javax.swing.JDialog {
     // End of variables declaration//GEN-END:variables
     private final Map<Long, Integer> mapActive = new HashMap<>();
     private final List<Product> data;
+    private final App parent;
     private JTable tbl_data;
 
     private void init() {

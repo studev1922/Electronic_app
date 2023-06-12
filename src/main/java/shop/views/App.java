@@ -27,8 +27,9 @@ import shop.services.staticControl.FilterProduct;
 import shop.services.staticControl.Message;
 import shop.services.staticControl.View;
 import shop.services.staticControl.ViewControl;
+import shop.services.staticControl.util;
 import shop.views.components.*;
-import shop.views.windows.dlg_activeProduct;
+import shop.views.windows.frame_activeProduct;
 import shop.views.windows.frame_order;
 import shop.views.windows.dlg_orderScanner;
 import shop.views.windows.dlg_security_login;
@@ -65,9 +66,9 @@ public class App extends javax.swing.JFrame implements AuthAccess {
         mnu_order = new javax.swing.JMenu();
         mni_order = new javax.swing.JMenuItem();
         aboutMenuItem = new javax.swing.JMenuItem();
-        mnu_help1 = new javax.swing.JMenu();
-        contentsMenuItem1 = new javax.swing.JMenuItem();
-        aboutMenuItem1 = new javax.swing.JMenuItem();
+        mnu_help = new javax.swing.JMenu();
+        mni_help = new javax.swing.JMenuItem();
+        mni_about = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -105,7 +106,7 @@ public class App extends javax.swing.JFrame implements AuthAccess {
         );
         lyp_articleLayout.setVerticalGroup(
             lyp_articleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 183, Short.MAX_VALUE)
+            .addGap(0, 184, Short.MAX_VALUE)
         );
 
         slp_article.setRightComponent(lyp_article);
@@ -269,20 +270,34 @@ public class App extends javax.swing.JFrame implements AuthAccess {
 
         mnu_bar.add(mnu_order);
 
-        mnu_help1.setMnemonic('h');
-        mnu_help1.setText("Hỗ trợ");
+        mnu_help.setMnemonic('h');
+        mnu_help.setText("Hỗ trợ");
 
-        contentsMenuItem1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        contentsMenuItem1.setMnemonic('c');
-        contentsMenuItem1.setText("Contents");
-        mnu_help1.add(contentsMenuItem1);
+        mni_help.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, java.awt.event.InputEvent.CTRL_DOWN_MASK | java.awt.event.InputEvent.META_DOWN_MASK));
+        mni_help.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        mni_help.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/help.png"))); // NOI18N
+        mni_help.setMnemonic('c');
+        mni_help.setText("Hỗ trợ");
+        mni_help.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mni_helpActionPerformed(evt);
+            }
+        });
+        mnu_help.add(mni_help);
 
-        aboutMenuItem1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        aboutMenuItem1.setMnemonic('a');
-        aboutMenuItem1.setText("About");
-        mnu_help1.add(aboutMenuItem1);
+        mni_about.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, java.awt.event.InputEvent.ALT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        mni_about.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        mni_about.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/question-mark.png"))); // NOI18N
+        mni_about.setMnemonic('a');
+        mni_about.setText("Giới thiệu");
+        mni_about.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mni_aboutActionPerformed(evt);
+            }
+        });
+        mnu_help.add(mni_about);
 
-        mnu_bar.add(mnu_help1);
+        mnu_bar.add(mnu_help);
 
         setJMenuBar(mnu_bar);
 
@@ -345,21 +360,31 @@ public class App extends javax.swing.JFrame implements AuthAccess {
     }//GEN-LAST:event_inu_exitActionPerformed
 
     private void mni_orderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mni_orderActionPerformed
-        securityControl(ASIDE_CONTROL.ORDER_SCANNER, C_ORDER_SCANNER);        
+        securityControl(ASIDE_CONTROL.ORDER_SCANNER, C_ORDER_SCANNER);
     }//GEN-LAST:event_mni_orderActionPerformed
 
     private void aboutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItemActionPerformed
         securityControl(ASIDE_CONTROL.ORDER, C_ORDER);
     }//GEN-LAST:event_aboutMenuItemActionPerformed
 
+    private void mni_helpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mni_helpActionPerformed
+        ViewControl.V_WEB.setTitle("HƯỚNG DẪN SỬ DỤNG");
+        ViewControl.V_WEB.setHTML(env.html.HELP);
+        ViewControl.V_WEB.setVisible(true);
+    }//GEN-LAST:event_mni_helpActionPerformed
+
+    private void mni_aboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mni_aboutActionPerformed
+        ViewControl.V_WEB.setTitle("THÔNG TIN GIỚI THIỆU");
+        ViewControl.V_WEB.setHTML(env.html.ABOUT);
+        ViewControl.V_WEB.setVisible(true);
+    }//GEN-LAST:event_mni_aboutActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMenuItem;
-    private javax.swing.JMenuItem aboutMenuItem1;
     private javax.swing.JMenuItem c_account;
     private javax.swing.JMenuItem c_activeProduct;
     private javax.swing.JMenuItem c_category;
     private javax.swing.JMenuItem c_product;
-    private javax.swing.JMenuItem contentsMenuItem1;
     private javax.swing.JMenuItem inu_exit;
     private javax.swing.JMenuItem inu_forgotPass;
     private javax.swing.JMenuItem inu_login;
@@ -368,11 +393,13 @@ public class App extends javax.swing.JFrame implements AuthAccess {
     private javax.swing.JLabel lbl_timeClock;
     private javax.swing.JLayeredPane lyp_article;
     private javax.swing.JLayeredPane lyp_carousel;
+    private javax.swing.JMenuItem mni_about;
+    private javax.swing.JMenuItem mni_help;
     private javax.swing.JMenuItem mni_order;
     private javax.swing.JMenu mnu_account;
     private javax.swing.JMenuBar mnu_bar;
     private javax.swing.JMenu mnu_control;
-    private javax.swing.JMenu mnu_help1;
+    private javax.swing.JMenu mnu_help;
     private javax.swing.JMenu mnu_order;
     private javax.swing.JPanel pnl_bottom;
     private javax.swing.JSplitPane slp_article;
@@ -508,7 +535,7 @@ public class App extends javax.swing.JFrame implements AuthAccess {
             }
             case ACTIVE_PRODUCT: {
                 this.dispose();
-                dlg_activeProduct dlg = new dlg_activeProduct(this, true);
+                frame_activeProduct dlg = new frame_activeProduct(this, true);
                 dlg.setSize(this.getSize());
                 dlg.setLocationRelativeTo(this);
                 dlg.setVisible(true);

@@ -2,8 +2,12 @@ package shop.configuration;
 
 import java.awt.Font;
 import java.io.File;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import lombok.AllArgsConstructor;
 
 import shop.services.staticControl.Lib;
 
@@ -28,4 +32,16 @@ public class env implements Config {
     );
 
     public final static String DEFAULT_IMG = "default.png";
+
+    @AllArgsConstructor
+    public static enum html {
+        HELP("help.html"), ABOUT("about.html");
+        private final String value;
+
+        public String getUrl() {
+            String name = new StringBuilder("/html")
+                    .append('/').append(value).toString();
+            return env.class.getResource(name).toString();
+        }
+    }
 }

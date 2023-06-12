@@ -1,6 +1,12 @@
 package shop;
 
+import java.io.IOException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.Scanner;
+import shop.configuration.env;
 import shop.services.staticControl.ViewControl;
+
 /**
  *
  * "B1. DOWNLOAD ALL DEPENDENCIES",<br>
@@ -18,7 +24,7 @@ public class Main_App {
     }
 
     // UIManager.LookAndFeelInfo
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Main_App.onLoadDisplay(); // load display components;
     }
 }
