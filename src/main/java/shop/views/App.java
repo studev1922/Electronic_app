@@ -29,7 +29,7 @@ import shop.services.staticControl.View;
 import shop.services.staticControl.ViewControl;
 import shop.views.components.*;
 import shop.views.windows.dlg_activeProduct;
-import shop.views.windows.dlg_order;
+import shop.views.windows.frame_order;
 import shop.views.windows.dlg_orderScanner;
 import shop.views.windows.dlg_security_login;
 import shop.views.windows.frame_ViewControl;
@@ -523,7 +523,7 @@ public class App extends javax.swing.JFrame implements AuthAccess {
                 AuthAccess.ROLE role = ViewControl.roleChooser();
                 this.dispose();
                 List<Order> orders = FilterOrder.getListByUser(role);
-                dlg_order dlg = new dlg_order(this, false, orders);
+                frame_order dlg = new frame_order(this, true, orders);
                 dlg.setVisible(true);
                 return;
             }

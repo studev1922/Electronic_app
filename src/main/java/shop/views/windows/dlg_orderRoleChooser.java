@@ -104,6 +104,12 @@ public class dlg_orderRoleChooser extends javax.swing.JDialog {
         this.setRole(btn_staff, AuthAccess.ROLE.STAFF);
     }
 
+    @Override
+    public void setVisible(boolean b) {
+        this.setEnabledButtons();
+        super.setVisible(b);
+    }
+
     private void setEnabledButtons() {
         btn_admin.setEnabled(security.hasAnyRoles(AuthAccess.ROLE.ADMIN));
         btn_buyer.setEnabled(security.hasAnyRoles(AuthAccess.ROLE.BUYER));

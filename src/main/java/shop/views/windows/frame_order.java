@@ -39,13 +39,13 @@ import shop.services.staticControl.util;
 import shop.utils.Format;
 import shop.utils.SetHypertext;
 
-public class dlg_order extends javax.swing.JDialog {
+public class frame_order extends javax.swing.JFrame {
 
-    public dlg_order(java.awt.Frame parent, boolean modal, List<Order> orders) {
-        super(parent, modal);
+    public frame_order(java.awt.Frame parent, boolean modal, List<Order> orders) {
         initComponents();
         this.setSize(parent.getSize());
         this.setLocationRelativeTo(parent);
+        this.setIconImage(parent.getIconImage());
         this.orderTable = Order.table(this.orders = orders);
         this.tic = new TableIndexControl(orderTable);
         this.export = new ExportOrder();
@@ -403,7 +403,7 @@ public class dlg_order extends javax.swing.JDialog {
 
         pnl_outWebcam.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 5, 1, new java.awt.Color(255, 102, 0)), "code scanner", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 14), new java.awt.Color(255, 102, 0))); // NOI18N
         pnl_outWebcam.setPreferredSize(new java.awt.Dimension(125, 125));
-        pnl_outWebcam.setLayout(new java.awt.GridLayout());
+        pnl_outWebcam.setLayout(new java.awt.GridLayout(1, 0));
 
         tbr_camera.setOrientation(javax.swing.SwingConstants.VERTICAL);
         tbr_camera.setRollover(true);
