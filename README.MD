@@ -14,7 +14,7 @@
    - Encrypt the password in the database
 
 
-[Check all accounts in database's scripts](./db_mssql_ELECTRONS.sql#240)
+[Check all accounts in database's scripts](./db_mssql_ELECTRONS.sql#L240)
 <table border style="text-align: center;">
    <tr><th colspan="3" style="text-align: center;">ACCOUNT LOGIN</th></tr>
    <tr><th>username</th><th>password</th><th>role</th></tr>
