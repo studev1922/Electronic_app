@@ -1,8 +1,5 @@
 # ELECTRONIC APP
 
-**VIDEO INSTRUCTION AT THE BOTTOM**
-## DEMO ELECTRONIC APP
-
 ## DESCRIPTION
 *Electronic application is a sales management platform. There are many extended functions that inherit Shop_app and build more sales invoices* <br>
 **Extended functions include**<br>
@@ -15,6 +12,7 @@
 
 
 [Check all accounts in database's scripts](./db_mssql_ELECTRONS.sql#L240)
+
 <table border style="text-align: center;">
    <tr><th colspan="3" style="text-align: center;">ACCOUNT LOGIN</th></tr>
    <tr><th>username</th><th>password</th><th>role</th></tr>
@@ -25,8 +23,10 @@
 </table>
 <hr>
 
-## DEMO
+**VIDEO INSTRUCTION AT THE BOTTOM**
+## DEMO ELECTRONIC APPLICATION
 wait for me
+<hr>
 
 ## GUIDE
 - setup java > [setup jdk and maven](https://youtu.be/vm3W-KsFnrE)<br>
