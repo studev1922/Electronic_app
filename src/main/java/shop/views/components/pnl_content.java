@@ -48,20 +48,20 @@ public class pnl_content extends javax.swing.JPanel {
             }
         });
 
-        lbl_image.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        lbl_image.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
         lbl_image.setForeground(new java.awt.Color(255, 153, 51));
         lbl_image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/logo.png"))); // NOI18N
         lbl_image.setText("default.png");
-        lbl_image.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        lbl_image.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         lbl_image.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lbl_image.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        lbl_subject.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 3, 0, new java.awt.Color(255, 153, 51)));
+        lbl_subject.setFont(new java.awt.Font("Times New Roman", 3, 12)); // NOI18N
         lbl_subject.setForeground(new java.awt.Color(255, 153, 51));
         lbl_subject.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_subject.setText("product's name");
-        lbl_subject.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        lbl_subject.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 3, 0, new java.awt.Color(255, 153, 51)));
 
         lbl_barcode.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         lbl_barcode.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -84,7 +84,6 @@ public class pnl_content extends javax.swing.JPanel {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel4.setText("số lượng");
 
-        txt_quantity.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         txt_quantity.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 txt_quantityPropertyChange(evt);
@@ -147,9 +146,9 @@ public class pnl_content extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lbl_image, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_subject, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_remove))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_remove)
+                    .addComponent(lbl_subject, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_barcode, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -218,6 +217,8 @@ public class pnl_content extends javax.swing.JPanel {
         ).getAbsolutePath();
         
         View.setImage(lbl_image, path, W, H);
+        this.lbl_image.setText(p.getImage());
+        this.lbl_subject.setText(p.getName());
         this.lbl_price.setText(String.valueOf(p.getPrice()));
         this.setQty(p.getQuantity());
         this.setBarcode();

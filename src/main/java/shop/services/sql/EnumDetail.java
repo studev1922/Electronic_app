@@ -116,7 +116,7 @@ public enum EnumDetail implements suport {
             for (Detail d : ds) {
                 qty = d.quantity;
                 quantity += qty;
-                sum = d.oldPrice * qty;
+                sum += d.oldPrice * qty;
             }
 
             return new Number[]{ds.size(), quantity, sum};
