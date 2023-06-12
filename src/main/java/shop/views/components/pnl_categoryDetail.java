@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import javax.swing.JTable;
 
 import lombok.Setter;
@@ -443,7 +444,7 @@ public class pnl_categoryDetail extends javax.swing.JPanel implements DetailCont
                 case DELETE:
                     String fileName = lbl_image.getText();
                     for (Product p : DAOModel.PRODUCT.getMap().values()) {
-                        if (key == p.getCg_id()) {
+                        if (Objects.equals(key, p.getCg_id())) {
                             Message.alert(root,
                                     "Không thể xóa phân loại đang lưu trữ sản phẩm",
                                     "DELETE Category",
@@ -459,7 +460,7 @@ public class pnl_categoryDetail extends javax.swing.JPanel implements DetailCont
                 default:
                     throw new AssertionError();
             }
-        } catch (SQLException ex) {
+        } catch (IllegalArgumentException | SQLException ex) {
             String mes = ex.getMessage();
             Message.alert(this, mes, mes, Message.TYPE.ERROR);
         }

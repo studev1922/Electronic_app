@@ -446,7 +446,6 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
     // End of variables declaration//GEN-END:variables
     private static final Config.folder FOLDER = Config.folder.product;
     private static final String DEFAULT_IMG = env.DEFAULT_IMG;
-    private static final ProductDAO pdao = DAOModel.PRODUCT;
     private static final CateDAO cdao = DAOModel.CATE;
     private static final UserDAO udao = DAOModel.USER;
     private FileControl fileControl;
@@ -486,16 +485,34 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
                         dataImg = fileControl.update(dataImg) ? e.getImage() : null;
                     }
                     break;
-                case DELETE:
-                    String fileName = lbl_image.getText();
-                    if (root.crud(type, key)) {
-                        fileControl.delete(fileName);
+                case DELETE: {
+                    // accept hard-delete if user has role ADMIN
+                    boolean isAdmin = security.hasAnyRoles(AuthAccess.ROLE.ADMIN);
+                    if (isAdmin) {
+                        String fileName = lbl_image.getText();
+                        if (Message.confirm(this,
+                                "Xóa vĩnh viễn " + e.toString(),
+                                "HARD DELETE PRODUCT",
+                                Message.CF_TYPE.YES_NO
+                        ) == 0) { // hard delete product
+                            if (root.crud(type, key)) {
+                                fileControl.delete(fileName);
+                            }
+                            return;
+                        }
+                    } else if (Message.confirm(this,
+                            "Xóa sản phẩm " + e.toString(),
+                            "DELETE PRODUCT",
+                            Message.CF_TYPE.YES_NO
+                    ) == 0) {
+                        this.softDelete(e, !isAdmin);
                     }
-                    break;
+                    return;
+                }
                 default:
                     throw new AssertionError();
             }
-        } catch (SQLException ex) {
+        } catch (IllegalArgumentException | SQLException ex) {
             String mes = ex.getMessage();
             Message.alert(this, mes, mes, Message.TYPE.ERROR);
         }
@@ -515,7 +532,7 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
         this.txt_id.setValue((int) e.getPrid());
         this.txt_name.setText(e.getName());
         this.txt_note.setText(e.getNote());
-        this.cb_isCheck.setSelected(e.getActive()>0);
+        this.cb_isCheck.setSelected(e.getActive() > 0);
         this.txt_price.setValue((int) e.getPrice());
         this.txt_quantity.setValue(e.getQuantity());
         this.dcs_regTime.setDate(e.getRegTime());
@@ -534,11 +551,32 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
         ).setVisible(true);
     }
 
+    private void softDelete(Product e, boolean removeRow) {
+        if (e == null) {
+            return;
+        }
+
+        Long key = e.getKey();
+        if (DAOModel.PRODUCT.setActive(-1, key)) { // soft-delete
+            if (removeRow) {
+                this.root.deleteRow(key);
+            } else {
+                this.root.updateRow(e);
+            }
+            Message.alert(this,
+                    "Đã xóa sản phẩm " + e.toString(),
+                    "XÓA SẢN PHẨM",
+                    Message.TYPE.INFO
+            );
+            this.setDetail(new Product()); // clear form
+        }
+    }
+
     private Product getFormData() {
         Long prid = Long.valueOf(txt_id.getValue());
         String name = txt_name.getText();
         String note = txt_note.getText();
-        int active = cb_isCheck.isSelected() ? 0 : 1;
+        int active = cb_isCheck.isSelected() ? 1 : 0;
         float price = txt_price.getValue();
         int quantity = txt_quantity.getValue();
         Date regTime = dcs_regTime.getDate();
@@ -551,11 +589,11 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
 
     private void authControl() {
         boolean isAdmin = security.hasAnyRoles(AuthAccess.ROLE.ADMIN);
-        
+
         cb_isCheck.setToolTipText("Chờ admin duyệt sản phẩm!");
         cb_isCheck.setEnabled(isAdmin);
         cbx_user.setEnabled(isAdmin);
-        if(!isAdmin) {
+        if (!isAdmin) {
             cbx_user.setSelectedItem(security.getUser());
         }
     }

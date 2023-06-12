@@ -26,18 +26,19 @@ import shop.views.windows.dlg_detailUser;
 import shop.views.windows.frame_ViewControl;
 
 public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<User> {
-
+    
     public pnl_userDetail() {
         initComponents();
         this.init();
         Map data = DAOModel.PRODUCT.getMap();
         C_PRODUCTS = new ArrayList<>(data.values());
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        rdo_activeGroup = new javax.swing.ButtonGroup();
         lbl_subject = new javax.swing.JLabel();
         pnl_img = new javax.swing.JPanel();
         lbl_image = new javax.swing.JLabel();
@@ -53,12 +54,14 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         txt_password = new javax.swing.JPasswordField();
         txt_email = new javax.swing.JTextField();
         txt_name = new javax.swing.JTextField();
-        cb_isActive = new javax.swing.JCheckBox();
         dcs_regTime = new com.toedter.calendar.JDateChooser();
         pnl_role = new javax.swing.JPanel();
         scr_products = new javax.swing.JScrollPane();
         lbl_textfield5 = new javax.swing.JLabel();
         lbl_quantity = new javax.swing.JLabel();
+        rdo_lock = new javax.swing.JRadioButton();
+        rdo_close = new javax.swing.JRadioButton();
+        rdo_open = new javax.swing.JRadioButton();
         pnl_control = new javax.swing.JPanel();
         btn_read = new javax.swing.JLabel();
         btn_insert = new javax.swing.JLabel();
@@ -78,11 +81,11 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         lbl_subject.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         add(lbl_subject, java.awt.BorderLayout.PAGE_START);
 
+        lbl_image.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_image.setForeground(new java.awt.Color(255, 153, 51));
         lbl_image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/logo.png"))); // NOI18N
         lbl_image.setText("default.png");
-        lbl_image.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_image.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lbl_image.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
@@ -127,48 +130,48 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
 
         add(pnl_img, java.awt.BorderLayout.LINE_START);
 
-        lbl_textfield.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
+        lbl_textfield.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield.setForeground(new java.awt.Color(255, 153, 51));
         lbl_textfield.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lbl_textfield.setText("Tên đăng nhập");
         lbl_textfield.setToolTipText("");
-        lbl_textfield.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        lbl_textfield.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         lbl_textfield.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lbl_textfield.setVerifyInputWhenFocusTarget(false);
 
-        lbl_textfield1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
+        lbl_textfield1.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield1.setForeground(new java.awt.Color(255, 153, 51));
         lbl_textfield1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lbl_textfield1.setText("password");
         lbl_textfield1.setToolTipText("password chỉ có thêm tạo mới, không được cập nhật");
-        lbl_textfield1.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        lbl_textfield1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         lbl_textfield1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lbl_textfield1.setVerifyInputWhenFocusTarget(false);
 
-        lbl_textfield2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
+        lbl_textfield2.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield2.setForeground(new java.awt.Color(255, 153, 51));
         lbl_textfield2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lbl_textfield2.setText("Thời gian tạo");
         lbl_textfield2.setToolTipText("");
-        lbl_textfield2.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        lbl_textfield2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         lbl_textfield2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lbl_textfield2.setVerifyInputWhenFocusTarget(false);
 
-        lbl_textfield3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
+        lbl_textfield3.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield3.setForeground(new java.awt.Color(255, 153, 51));
         lbl_textfield3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lbl_textfield3.setText("email");
         lbl_textfield3.setToolTipText("");
-        lbl_textfield3.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        lbl_textfield3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         lbl_textfield3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lbl_textfield3.setVerifyInputWhenFocusTarget(false);
 
-        lbl_textfield4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
+        lbl_textfield4.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield4.setForeground(new java.awt.Color(255, 153, 51));
         lbl_textfield4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lbl_textfield4.setText("họ và tên");
         lbl_textfield4.setToolTipText("");
-        lbl_textfield4.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        lbl_textfield4.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         lbl_textfield4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lbl_textfield4.setVerifyInputWhenFocusTarget(false);
 
@@ -181,10 +184,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         txt_name.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
         txt_name.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        cb_isActive.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        cb_isActive.setText("mở");
-        cb_isActive.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-
         dcs_regTime.setDateFormatString("EEEE, dd-MM-yyyy hh:mm:ss");
         dcs_regTime.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
 
@@ -193,23 +192,37 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
 
         scr_products.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "List product of user", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 3, 24), new java.awt.Color(255, 153, 51))); // NOI18N
 
-        lbl_textfield5.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
+        lbl_textfield5.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield5.setForeground(new java.awt.Color(255, 153, 51));
         lbl_textfield5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lbl_textfield5.setText("số sản phẩm");
         lbl_textfield5.setToolTipText("");
-        lbl_textfield5.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        lbl_textfield5.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         lbl_textfield5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lbl_textfield5.setVerifyInputWhenFocusTarget(false);
 
-        lbl_quantity.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
+        lbl_quantity.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_quantity.setForeground(new java.awt.Color(255, 51, 0));
         lbl_quantity.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_quantity.setText("0");
         lbl_quantity.setToolTipText("");
-        lbl_quantity.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        lbl_quantity.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         lbl_quantity.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lbl_quantity.setVerifyInputWhenFocusTarget(false);
+
+        rdo_activeGroup.add(rdo_lock);
+        rdo_lock.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        rdo_lock.setForeground(new java.awt.Color(255, 0, 0));
+        rdo_lock.setText("Khóa");
+
+        rdo_activeGroup.add(rdo_close);
+        rdo_close.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        rdo_close.setText("Đóng");
+
+        rdo_activeGroup.add(rdo_open);
+        rdo_open.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        rdo_open.setSelected(true);
+        rdo_open.setText("Mở");
 
         javax.swing.GroupLayout pnl_infoLayout = new javax.swing.GroupLayout(pnl_info);
         pnl_info.setLayout(pnl_infoLayout);
@@ -220,13 +233,18 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
                 .addGroup(pnl_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(scr_products)
                     .addGroup(pnl_infoLayout.createSequentialGroup()
-                        .addGroup(pnl_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(lbl_textfield4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbl_textfield3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbl_textfield2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbl_textfield, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                            .addComponent(lbl_textfield1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                            .addComponent(cb_isActive, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(pnl_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnl_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(lbl_textfield4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbl_textfield3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbl_textfield2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbl_textfield, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                                .addComponent(lbl_textfield1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))
+                            .addComponent(rdo_lock)
+                            .addGroup(pnl_infoLayout.createSequentialGroup()
+                                .addComponent(rdo_close)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rdo_open)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pnl_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_username)
@@ -237,7 +255,7 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
                             .addGroup(pnl_infoLayout.createSequentialGroup()
                                 .addComponent(dcs_regTime, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl_textfield5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl_textfield5)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lbl_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(8, 8, 8)))))
@@ -263,9 +281,14 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
                     .addComponent(lbl_textfield4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_name, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnl_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cb_isActive, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pnl_role, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnl_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnl_role, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnl_infoLayout.createSequentialGroup()
+                        .addComponent(rdo_lock)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnl_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rdo_close)
+                            .addComponent(rdo_open))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_textfield2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -274,7 +297,7 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
                         .addComponent(lbl_textfield5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(scr_products, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
+                .addComponent(scr_products, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE))
         );
 
         pnl_infoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {dcs_regTime, lbl_quantity, lbl_textfield, lbl_textfield1, lbl_textfield2, lbl_textfield3, lbl_textfield4, lbl_textfield5, txt_email, txt_name, txt_password, txt_username});
@@ -457,7 +480,6 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
     private javax.swing.JLabel btn_previos;
     private javax.swing.JLabel btn_read;
     private javax.swing.JLabel btn_update;
-    private javax.swing.JCheckBox cb_isActive;
     private com.toedter.calendar.JDateChooser dcs_regTime;
     private javax.swing.JLabel lbl_image;
     private javax.swing.JLabel lbl_quantity;
@@ -472,6 +494,10 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
     private javax.swing.JPanel pnl_img;
     private javax.swing.JPanel pnl_info;
     private javax.swing.JPanel pnl_role;
+    private javax.swing.ButtonGroup rdo_activeGroup;
+    private javax.swing.JRadioButton rdo_close;
+    private javax.swing.JRadioButton rdo_lock;
+    private javax.swing.JRadioButton rdo_open;
     private javax.swing.JScrollPane scr_products;
     private javax.swing.JTextField txt_email;
     private javax.swing.JTextField txt_name;
@@ -483,10 +509,10 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
     private final List<Product> C_PRODUCTS;
     private FileControl fileControl;
     private String dataImg = null;
-
+    
     @Setter
     private frame_ViewControl root;
-
+    
     private void init() {
         this.fileControl = new FileControl(lbl_image, FOLDER, DEFAULT_IMG);
 
@@ -495,11 +521,11 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
             pnl_role.add(new JCheckBox(string));
         });
     }
-
+    
     private void fillProducts() {
         int size;
         String key = txt_username.getText();
-
+        
         if (key != null && !key.isEmpty()) {
             List data = FilterProduct.getR_BY(C_PRODUCTS, FilterProduct.R_BY.USER, key);
             JTable table = Product.table(data);
@@ -511,12 +537,12 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
             this.lbl_quantity.setText("chưa tải");
         }
     }
-
+    
     private void crud(frame_ViewControl.C_TYPE type) {
         try {
             String key = txt_username.getText();
             User e = this.getFormData();
-
+            
             switch (type) {
                 case READ:
                     root.crud(type, key);
@@ -545,12 +571,12 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
                 default:
                     throw new AssertionError();
             }
-        } catch (SQLException ex) {
+        } catch (IllegalArgumentException | SQLException ex) {
             String mes = ex.getMessage();
             Message.alert(this, mes, mes, Message.TYPE.ERROR);
         }
     }
-
+    
     @Override
     public void setDetail(User e) {
         if (e == null) {
@@ -558,9 +584,17 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         }
         // get all roles of entity
         String[] roles = e.getAuths().toArray(new String[1]);
+        int active = e.getActive();
 
         // SET ALL INFO
-        this.cb_isActive.setSelected(e.getActive() > 0);
+        if (active < 0) {
+            rdo_lock.setSelected(true);
+        } else if (active == 0) {
+            rdo_close.setSelected(true);
+        } else {
+            rdo_open.setSelected(true);
+        }
+        
         this.txt_username.setText(e.getUsername());
         this.txt_email.setText(e.getEmail());
         this.txt_name.setText(e.getName());
@@ -574,7 +608,7 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         this.txt_password.setToolTipText(e.getPassword());
         this.fillProducts(); // fill list product of account's username
     }
-
+    
     @Override
     public void showDialogDetail(User u) {
         String key = u.getUsername();
@@ -585,7 +619,7 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
             System.out.println(">>> key : " + key);
         }
     }
-
+    
     private void setSelectedRoles(String... roles) {
         Component[] checkRoles = this.pnl_role.getComponents();
         int i = 0, size = roles.length;
@@ -612,7 +646,7 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
             }
         }
     }
-
+    
     private String[] getSelectedRoles() {
         Component[] checkRoles = this.pnl_role.getComponents();
         ArrayList<String> list = new ArrayList<>(checkRoles.length);
@@ -624,28 +658,28 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
                 }
             }
         }
-
+        
         return list.toArray(new String[0]);
     }
-
+    
     private User getFormData() {
         String username = txt_username.getText();
         String password = txt_password.getText();
         String name = txt_name.getText();
         String email = txt_email.getText();
-        int active = cb_isActive.isSelected() ? 1 : 0;
+        int active = rdo_close.isSelected() ? -1 : rdo_close.isSelected() ? 0 : 1;
         Date regTime = dcs_regTime.getDate();
         String image = lbl_image.getText();
         String[] roles = this.getSelectedRoles();
-
+        
         return new User(username, password, email, name, active, image, regTime, roles);
     }
-
+    
     private boolean checkForm(User e) {
-
+        
         return true;
     }
-
+    
     private void showImage(String fileName) {
         dataImg = fileName;
         String pathImg = Lib.getFile(FOLDER, fileName, DEFAULT_IMG).toString();

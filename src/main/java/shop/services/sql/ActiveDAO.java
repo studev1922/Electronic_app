@@ -8,7 +8,7 @@ public interface ActiveDAO<K> {
      * @param table for update
      * @param key to set condition
      * @param size to create parameters
-     * @return the query update set access 
+     * @return the query update set access
      */
     static String createActiveQuery(String table, String key, int size) {
         StringBuilder temps = new StringBuilder("(");

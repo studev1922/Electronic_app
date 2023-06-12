@@ -100,11 +100,15 @@ public abstract class AbstractDAO<K, E> {
         if (key == null) {
             return 0;
         }
-        int remove = Jdbc.execute(delete, key);
-        if (this.map.get(key) != null && remove > 0) {
-            this.map.remove(key);
+        try {
+            int remove = Jdbc.execute(delete, key);
+            if (this.map.get(key) != null && remove > 0) {
+                this.map.remove(key);
+            }
+            return remove;
+        } catch (SQLException e) {
+            throw e;
         }
-        return remove;
     }
 
     /**
