@@ -1,6 +1,6 @@
 # ELECTRONIC APP
-[click here to see other versions on the google drive](https://drive.google.com/drive/folders/1RkALUwLSTMoA4nPC_sMRUAPenY71RujG?usp=sharing)
-
+[Open file demo](https://drive.google.com/file/d/1YdFPmB_GKIlBFKpp3LfCeCMPyoAYZ9tV/view?usp=drive_link)<br>
+[Click here to see other versions on the google drive](https://drive.google.com/drive/folders/1RkALUwLSTMoA4nPC_sMRUAPenY71RujG?usp=sharing)
 
 ## DESCRIPTION
 *Electronic application is a sales management platform. There are many extended functions that inherit Shop_app and build more sales invoices* <br>
