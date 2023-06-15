@@ -35,7 +35,7 @@ public class User implements EntityControl<String> {
     private String username;
     private String password;
     private String email;
-    private String name;
+    private String name = "Khách Hàng";
     private int active;
     private String image;
     @Builder.ObtainVia

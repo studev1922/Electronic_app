@@ -8,10 +8,10 @@ GO
 -- Create database
 CREATE DATABASE [DB_ELECTRON]
 GO
-USE [DB_ELECTRON]
-GO
 
 -- +++++++++++++++++++++++++++++++ CREATE TABLES +++++++++++++++++++++++++++++++ --
+USE [DB_ELECTRON]
+GO
 
 /* ACCOUNTS AND AUTHORIZATIONS */
 -- Create USERS table
@@ -115,6 +115,8 @@ GO
 
 GO
 -- +++++++++++++++++++++++++++++++ CREATE VIEWS +++++++++++++++++++++++++++++++ --
+USE [DB_ELECTRON]
+GO
 
 -- VIEW COUNT PRODUCT OF USERS
 IF EXISTS (SELECT name FROM sys.views WHERE name = N'V_USER_COUNT_PRODUCT') DROP VIEW V_USER_COUNT_PRODUCT
@@ -138,6 +140,8 @@ GO
 
 
 -- +++++++++++++++++++++++++++++++ CREATE PROCEDURES +++++++++++++++++++++++++++++++ --
+USE [DB_ELECTRON]
+GO
 
 -- Create procedure update less password
 IF EXISTS (SELECT [object_id] FROM sys.procedures WHERE name = N'pr_update_less_pass') DROP PROC pr_update_less_pass
@@ -148,6 +152,7 @@ AS BEGIN
    UPDATE USERS SET username=@username, email=@email,name=@name,active=@active,image=@image WHERE username=@username;
    SELECT password FROM USERS WHERE username = @username;
 END
+GO
 
 -- Create procedure update password
 IF EXISTS (SELECT [object_id] FROM sys.procedures WHERE name = N'pr_update_pass') DROP PROC pr_update_pass
@@ -158,6 +163,7 @@ AS BEGIN
    UPDATE USERS SET password=PWDENCRYPT(@password) WHERE username = @username OR email = @username;
    SELECT username, password FROM USERS WHERE username = @username OR email = @username;
 END
+GO
 
 -- Create procedure login >>> login by (username or email) and password
 IF EXISTS (SELECT [object_id] FROM sys.procedures WHERE name = N'pr_login') DROP PROC pr_login
@@ -187,6 +193,8 @@ GO
 
 
 -- +++++++++++++++++++++++++++++++ CREATE TRIGGERS +++++++++++++++++++++++++++++++ --
+USE [DB_ELECTRON]
+GO
 
 -- Create trigger product > return data inserted
 IF EXISTS (SELECT [object_id] FROM sys.triggers WHERE name = N'TG_PRODUCTS') DROP TRIGGER TG_PRODUCTS
@@ -213,6 +221,7 @@ END
 GO
 
 -- +++++++++++++++++++++++++++++++ DELETE DATA +++++++++++++++++++++++++++++++ --
+USE [DB_ELECTRON]
 GO
 DELETE PRODUCTS
 DELETE CATEGORIES
@@ -225,6 +234,8 @@ GO
 
 
 -- +++++++++++++++++++++++++++++++ INSERT DATA +++++++++++++++++++++++++++++++ --
+USE [DB_ELECTRON]
+GO
 -- Insert role data
 INSERT INTO dbo.[ROLES]
    ([rid], [role])

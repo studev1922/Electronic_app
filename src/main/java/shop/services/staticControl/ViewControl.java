@@ -20,20 +20,20 @@ import shop.views.windows.dlg_security_register;
 import shop.views.windows.frame_ViewWeb;
 
 public interface ViewControl {
-    
+
     App ROOT_APP = new App();
     dlg_security_login S_LOGIN = new dlg_security_login(ROOT_APP, true);
     dlg_security_register S_REGISTER = new dlg_security_register(ROOT_APP, true);
     dlg_security_forgotPass S_FORGOT_PASS = new dlg_security_forgotPass(ROOT_APP, true);
     dlg_orderRoleChooser roleChooser = new dlg_orderRoleChooser(ROOT_APP, true);
     frame_ViewWeb V_WEB = new frame_ViewWeb(ROOT_APP);
-    
+
     static AuthAccess.ROLE roleChooser() {
         roleChooser.setLocationRelativeTo(ROOT_APP);
         roleChooser.setVisible(true);
         return roleChooser.role;
     }
-    
+
     static void view_logout() {
         User u = security.getUser();
         if (security.isLogin()) {
@@ -42,11 +42,12 @@ public interface ViewControl {
                     "TÀI KHOẢN: " + u.getName(), Message.CF_TYPE.YES_NO)
                     == 0) {
                 security.logout();
+                S_LOGIN.clearForm();
                 ROOT_APP.loadControlDisplay();
             }
         }
     }
-    
+
     static void exit() {
         if (Message.confirm(ROOT_APP, "Xác nhận đóng ứng dụng?",
                 "ĐÓNG ỨNG DỤNG SHOP_APP", Message.CF_TYPE.YES_NO)
@@ -54,7 +55,7 @@ public interface ViewControl {
             System.exit(0);
         }
     }
-    
+
     @SuppressWarnings("")
     static boolean sendCodeToMail(String subject, String content, String... toMails) throws InterruptedException {
         dlg_loading load = new dlg_loading(null, true);

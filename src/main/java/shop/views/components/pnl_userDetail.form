@@ -22,20 +22,20 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="lbl_subject">
       <Properties>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-            <MatteColorBorder bottom="3" left="0" right="0" top="1">
-              <Color PropertyName="color" blue="33" green="99" red="ff" type="rgb"/>
-            </MatteColorBorder>
-          </Border>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Times New Roman" size="20" style="3"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="33" green="99" red="ff" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="user&apos;s subject"/>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Times New Roman" size="20" style="3"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+            <MatteColorBorder bottom="3" left="0" right="0" top="1">
+              <Color PropertyName="color" blue="33" green="99" red="ff" type="rgb"/>
+            </MatteColorBorder>
+          </Border>
         </Property>
       </Properties>
       <Constraints>
@@ -149,12 +149,12 @@
                                   <Component id="lbl_textfield" alignment="0" pref="160" max="32767" attributes="0"/>
                                   <Component id="lbl_textfield1" alignment="0" pref="160" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="rdo_lock" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="rdo_close" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rdo_active" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="rdo_open" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbx_active" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <Component id="cbx_active1" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -164,7 +164,7 @@
                               <Component id="txt_password" alignment="0" max="32767" attributes="0"/>
                               <Component id="txt_name" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="dcs_regTime" pref="230" max="32767" attributes="0"/>
+                                  <Component id="dcs_regTime" pref="224" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="lbl_textfield5" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -203,14 +203,15 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="pnl_role" min="-2" pref="91" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Component id="rdo_lock" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                      <Component id="pnl_role" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rdo_close" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rdo_open" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rdo_active" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbx_active" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="cbx_active1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -223,7 +224,7 @@
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="scr_products" pref="122" max="32767" attributes="0"/>
+                  <Component id="scr_products" pref="121" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -346,6 +347,9 @@
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
           </Properties>
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_usernameKeyPressed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JPasswordField" name="txt_password">
         </Component>
@@ -448,13 +452,13 @@
             <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="rdo_lock">
+        <Component class="javax.swing.JRadioButton" name="rdo_active">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="rdo_activeGroup"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Times New Roman" size="16" style="1"/>
+              <Font name="Times New Roman" size="18" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="ff" type="rgb"/>
@@ -462,27 +466,27 @@
             <Property name="text" type="java.lang.String" value="Kh&#xf3;a"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="rdo_close">
+        <Component class="javax.swing.JCheckBox" name="cbx_active">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="rdo_activeGroup"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Times New Roman" size="16" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="&#x110;&#xf3;ng"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JRadioButton" name="rdo_open">
-          <Properties>
-            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="rdo_activeGroup"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Times New Roman" size="16" style="1"/>
+              <Font name="Times New Roman" size="18" style="0"/>
             </Property>
             <Property name="selected" type="boolean" value="true"/>
-            <Property name="text" type="java.lang.String" value="M&#x1edf;"/>
+            <Property name="text" type="java.lang.String" value="ho&#x1ea1;t &#x111;&#x1ed9;ng"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="cbx_active1">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="rdo_activeGroup"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Times New Roman" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="kh&#xf4;ng ho&#x1ea1;t &#x111;&#x1ed9;ng"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -612,12 +616,8 @@
         </Component>
         <Component class="javax.swing.JLabel" name="btn_update">
           <Properties>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                <MatteColorBorder>
-                  <Color PropertyName="color" blue="0" green="99" red="ff" type="rgb"/>
-                </MatteColorBorder>
-              </Border>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Times New Roman" size="24" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="cc" red="ff" type="rgb"/>
@@ -628,8 +628,12 @@
             </Property>
             <Property name="text" type="java.lang.String" value="C&#x1ead;p nh&#x1ead;t"/>
             <Property name="toolTipText" type="java.lang.String" value="password s&#x1ebd; kh&#xf4;ng &#x111;&#x1b0;&#x1ee3;c update"/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Times New Roman" size="24" style="1"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                <MatteColorBorder>
+                  <Color PropertyName="color" blue="0" green="99" red="ff" type="rgb"/>
+                </MatteColorBorder>
+              </Border>
             </Property>
             <Property name="iconTextGap" type="int" value="5"/>
           </Properties>

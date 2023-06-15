@@ -210,7 +210,7 @@ public class frame_activeProduct extends javax.swing.JFrame {
             // only active checkbox value
             if (value instanceof Boolean) {
                 isActive = (Boolean) value;
-                mapActive.put((Long) key, isActive ? 1 : 0);
+                mapActive.put((Long) key, isActive ? 1 : -1); // active or lock
                 changed = "Sửa đổi: " + Arrays.toString(mapActive.keySet().toArray());
 
                 is = Integer.parseInt(lbl_isActive.getText());

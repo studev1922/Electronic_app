@@ -125,6 +125,12 @@ public class pnl_categoryDetail extends javax.swing.JPanel implements DetailCont
         lbl_textfield.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lbl_textfield.setVerifyInputWhenFocusTarget(false);
 
+        txt_id.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_idKeyPressed(evt);
+            }
+        });
+
         lbl_textfield1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         lbl_textfield1.setForeground(new java.awt.Color(255, 153, 51));
         lbl_textfield1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -367,6 +373,18 @@ public class pnl_categoryDetail extends javax.swing.JPanel implements DetailCont
     private void btn_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clearActionPerformed
         this.setDetail(new Category());
     }//GEN-LAST:event_btn_clearActionPerformed
+
+    private void txt_idKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_idKeyPressed
+        if (evt.getKeyCode() == 10) {
+            int id = txt_id.getValue();
+            Category e = DAOModel.CATE.getById(id);
+            if (e != null) {
+                this.setDetail(e);
+            } else {
+                lbl_subject.setText("Không tìm thấy " + id);
+            }
+        }
+    }//GEN-LAST:event_txt_idKeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

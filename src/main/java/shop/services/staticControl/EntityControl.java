@@ -114,6 +114,7 @@ public interface EntityControl<K> {
             if (width > 300) {
                 width = 300;
             }
+            width += 5;
             columnModel.getColumn(column).setPreferredWidth(width);
         }
     }

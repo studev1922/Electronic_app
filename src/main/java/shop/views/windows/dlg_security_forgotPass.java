@@ -157,11 +157,8 @@ public class dlg_security_forgotPass extends javax.swing.JDialog implements Conf
 
     private void txt_emailKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_emailKeyPressed
         if (evt.getKeyCode() == 10) {
-            if (!checkEmailPattern()) {
-                return;
-            }
-            User u = FilterUser.getByEmail(txt_email.getText());
-            lbl_username.setText(u == null ? "Tên tài khoản tìm bằng email"
+            User u = FilterUser.getByUid_Email(txt_email.getText());
+            lbl_username.setText(u == null ? "Không tìm thấy tài khoản!"
                     : u.getUsername() + " : " + u.getEmail());
         }
     }//GEN-LAST:event_txt_emailKeyPressed
@@ -182,20 +179,16 @@ public class dlg_security_forgotPass extends javax.swing.JDialog implements Conf
     private javax.swing.JTextField txt_email;
     // End of variables declaration//GEN-END:variables
 
-    private boolean checkEmailPattern() {
-        return Regex.isRegex(txt_email.getText(), Regex.PATTERNS.EMAIL);
-    }
-
     private void forgotPass() {
         String title = "NHẬP MẬT KHẨU";
         Message.TYPE none = Message.TYPE.NONE, warn = Message.TYPE.WARNING;
         String password, confirmPass, email = this.txt_email.getText();
-        User u = FilterUser.getByEmail(email);
-
+        User u = FilterUser.getByUid_Email(email);
+        
         if(u == null) {
             Message.alert(this, email+" chưa được đăng ký!","EMALI KHÔNG TỒN TẠI!",warn);
             return;
-        }
+        } else email = u.getEmail();
         
         do { // confirm password
             do password = Message.prompt(this, "Mật khẩu mới: ", title, none);

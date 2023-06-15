@@ -69,11 +69,11 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
         lbl_subject.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         add(lbl_subject, java.awt.BorderLayout.PAGE_START);
 
+        lbl_image.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_image.setForeground(new java.awt.Color(255, 153, 51));
         lbl_image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/logo.png"))); // NOI18N
         lbl_image.setText("default.png");
-        lbl_image.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_image.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lbl_image.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
@@ -118,21 +118,21 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
 
         add(pnl_img, java.awt.BorderLayout.LINE_START);
 
-        lbl_textfield.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
+        lbl_textfield.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield.setForeground(new java.awt.Color(255, 153, 51));
         lbl_textfield.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_textfield.setText("Mã sản phẩm");
         lbl_textfield.setToolTipText("");
-        lbl_textfield.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        lbl_textfield.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         lbl_textfield.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lbl_textfield.setVerifyInputWhenFocusTarget(false);
 
-        lbl_textfield1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
+        lbl_textfield1.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield1.setForeground(new java.awt.Color(255, 153, 51));
         lbl_textfield1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_textfield1.setText("Tên sản phẩm");
         lbl_textfield1.setToolTipText("");
-        lbl_textfield1.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        lbl_textfield1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         lbl_textfield1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lbl_textfield1.setVerifyInputWhenFocusTarget(false);
 
@@ -153,12 +153,12 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
         txt_quantity.setMinimumSize(new java.awt.Dimension(64, 30));
         txt_quantity.setPreferredSize(new java.awt.Dimension(64, 25));
 
-        lbl_textfield2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
+        lbl_textfield2.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_textfield2.setForeground(new java.awt.Color(255, 153, 51));
         lbl_textfield2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_textfield2.setText("Thời gian tạo");
         lbl_textfield2.setToolTipText("");
-        lbl_textfield2.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        lbl_textfield2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(255, 153, 51)));
         lbl_textfield2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lbl_textfield2.setVerifyInputWhenFocusTarget(false);
 
@@ -324,11 +324,11 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
         });
         pnl_control.add(btn_update);
 
-        btn_delete.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 153, 0)));
+        btn_delete.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btn_delete.setForeground(new java.awt.Color(255, 51, 51));
         btn_delete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/delete.png"))); // NOI18N
         btn_delete.setText("Xóa");
-        btn_delete.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btn_delete.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 153, 0)));
         btn_delete.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         btn_delete.setIconTextGap(5);
         btn_delete.addMouseListener(new java.awt.event.MouseAdapter() {

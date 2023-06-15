@@ -24,6 +24,7 @@ public class dlg_security_login extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         txt_uid = new javax.swing.JTextField();
         txt_pass = new javax.swing.JPasswordField();
+        btn_clear = new javax.swing.JButton();
         btn_login = new javax.swing.JButton();
         btn_register = new javax.swing.JButton();
         lbl_forForgotPass = new javax.swing.JLabel();
@@ -31,11 +32,11 @@ public class dlg_security_login extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("ĐĂNG NHẬP TÀI KHOẢN");
 
+        lbl_heading.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         lbl_heading.setForeground(new java.awt.Color(255, 153, 51));
         lbl_heading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_heading.setText("ĐĂNG NHẬP TÀI KHOẢN");
         lbl_heading.setFocusable(false);
-        lbl_heading.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 16)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -58,6 +59,14 @@ public class dlg_security_login extends javax.swing.JDialog {
         txt_pass.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txt_passKeyPressed(evt);
+            }
+        });
+
+        btn_clear.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btn_clear.setText("clear");
+        btn_clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_clearActionPerformed(evt);
             }
         });
 
@@ -94,22 +103,26 @@ public class dlg_security_login extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lbl_heading, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+            .addComponent(lbl_heading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txt_uid))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txt_pass))
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txt_uid))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txt_pass))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 12, Short.MAX_VALUE)
                         .addComponent(lbl_forForgotPass)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_clear, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn_register)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn_login)))
@@ -129,11 +142,12 @@ public class dlg_security_login extends javax.swing.JDialog {
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
                     .addComponent(txt_pass, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btn_login)
                         .addComponent(btn_register))
-                    .addComponent(lbl_forForgotPass, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(lbl_forForgotPass, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btn_clear, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -160,7 +174,12 @@ public class dlg_security_login extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_txt_passKeyPressed
 
+    private void btn_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clearActionPerformed
+        this.clearForm();
+    }//GEN-LAST:event_btn_clearActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_clear;
     private javax.swing.JButton btn_login;
     private javax.swing.JButton btn_register;
     private javax.swing.JLabel jLabel1;
@@ -194,5 +213,10 @@ public class dlg_security_login extends javax.swing.JDialog {
                 this.dispose();
             }
         }
+    }
+
+    public void clearForm() {
+        this.txt_uid.setText(null);
+        this.txt_pass.setText(null);
     }
 }

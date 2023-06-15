@@ -71,6 +71,9 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lbl_image">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Times New Roman" size="20" style="3"/>
+            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="99" red="ff" type="rgb"/>
             </Property>
@@ -79,9 +82,6 @@
               <Image iconType="3" name="/icons/logo.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="default.png"/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Times New Roman" size="20" style="3"/>
-            </Property>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
@@ -204,12 +204,8 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lbl_textfield">
           <Properties>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                <MatteColorBorder bottom="1" left="0" right="0" top="1">
-                  <Color PropertyName="color" blue="33" green="99" red="ff" type="rgb"/>
-                </MatteColorBorder>
-              </Border>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Times New Roman" size="20" style="3"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="99" red="ff" type="rgb"/>
@@ -217,8 +213,12 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="M&#xe3; s&#x1ea3;n ph&#x1ea9;m"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Times New Roman" size="20" style="3"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                <MatteColorBorder bottom="1" left="0" right="0" top="1">
+                  <Color PropertyName="color" blue="33" green="99" red="ff" type="rgb"/>
+                </MatteColorBorder>
+              </Border>
             </Property>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
@@ -228,12 +228,8 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_textfield1">
           <Properties>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                <MatteColorBorder bottom="1" left="0" right="0" top="1">
-                  <Color PropertyName="color" blue="33" green="99" red="ff" type="rgb"/>
-                </MatteColorBorder>
-              </Border>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Times New Roman" size="20" style="3"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="99" red="ff" type="rgb"/>
@@ -241,8 +237,12 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="T&#xea;n s&#x1ea3;n ph&#x1ea9;m"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Times New Roman" size="20" style="3"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                <MatteColorBorder bottom="1" left="0" right="0" top="1">
+                  <Color PropertyName="color" blue="33" green="99" red="ff" type="rgb"/>
+                </MatteColorBorder>
+              </Border>
             </Property>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
@@ -312,12 +312,8 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbl_textfield2">
           <Properties>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                <MatteColorBorder bottom="1" left="0" right="0" top="1">
-                  <Color PropertyName="color" blue="33" green="99" red="ff" type="rgb"/>
-                </MatteColorBorder>
-              </Border>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Times New Roman" size="20" style="3"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="99" red="ff" type="rgb"/>
@@ -325,8 +321,12 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="Th&#x1edd;i gian t&#x1ea1;o"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Times New Roman" size="20" style="3"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                <MatteColorBorder bottom="1" left="0" right="0" top="1">
+                  <Color PropertyName="color" blue="33" green="99" red="ff" type="rgb"/>
+                </MatteColorBorder>
+              </Border>
             </Property>
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>

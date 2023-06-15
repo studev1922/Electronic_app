@@ -2,7 +2,6 @@ package shop.services.staticControl;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -93,9 +92,19 @@ public interface FilterUser {
         return null;
     }
 
-    public static User getByEmail(String email) {
+    public static Object getByEmail(String email) {
         for (User e : DAOModel.USER.getMap().values()) {
             if (email.equalsIgnoreCase(e.getEmail())) {
+                return e;
+            }
+        }
+        return null;
+    }
+
+    public static User getByUid_Email(String uid_email) {
+        for (User e : DAOModel.USER.getMap().values()) {
+            if (uid_email.equalsIgnoreCase(e.getEmail())
+                    || uid_email.equalsIgnoreCase(e.getUsername())) {
                 return e;
             }
         }

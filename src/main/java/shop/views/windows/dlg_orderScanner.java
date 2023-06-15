@@ -372,6 +372,7 @@ public class dlg_orderScanner extends javax.swing.JDialog {
         }
 
         if ((p = DAOModel.PRODUCT.getById(prid)) != null) {
+            java.awt.Toolkit.getDefaultToolkit().beep(); // sound beep
             if ((active = p.getActive()) > 0) {
                 this.appenContent(p);
             } else if (active < 0) {

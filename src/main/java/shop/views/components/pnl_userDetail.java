@@ -26,14 +26,14 @@ import shop.views.windows.dlg_detailUser;
 import shop.views.windows.frame_ViewControl;
 
 public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<User> {
-    
+
     public pnl_userDetail() {
         initComponents();
         this.init();
         Map data = DAOModel.PRODUCT.getMap();
         C_PRODUCTS = new ArrayList<>(data.values());
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -59,9 +59,9 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         scr_products = new javax.swing.JScrollPane();
         lbl_textfield5 = new javax.swing.JLabel();
         lbl_quantity = new javax.swing.JLabel();
-        rdo_lock = new javax.swing.JRadioButton();
-        rdo_close = new javax.swing.JRadioButton();
-        rdo_open = new javax.swing.JRadioButton();
+        rdo_active = new javax.swing.JRadioButton();
+        cbx_active = new javax.swing.JCheckBox();
+        cbx_active1 = new javax.swing.JCheckBox();
         pnl_control = new javax.swing.JPanel();
         btn_read = new javax.swing.JLabel();
         btn_insert = new javax.swing.JLabel();
@@ -74,11 +74,11 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
 
         setLayout(new java.awt.BorderLayout());
 
-        lbl_subject.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 3, 0, new java.awt.Color(255, 153, 51)));
+        lbl_subject.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
         lbl_subject.setForeground(new java.awt.Color(255, 153, 51));
         lbl_subject.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_subject.setText("user's subject");
-        lbl_subject.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
+        lbl_subject.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 3, 0, new java.awt.Color(255, 153, 51)));
         add(lbl_subject, java.awt.BorderLayout.PAGE_START);
 
         lbl_image.setFont(new java.awt.Font("Times New Roman", 3, 20)); // NOI18N
@@ -177,6 +177,11 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
 
         txt_username.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
         txt_username.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txt_username.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_usernameKeyPressed(evt);
+            }
+        });
 
         txt_email.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
         txt_email.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -210,19 +215,19 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         lbl_quantity.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lbl_quantity.setVerifyInputWhenFocusTarget(false);
 
-        rdo_activeGroup.add(rdo_lock);
-        rdo_lock.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        rdo_lock.setForeground(new java.awt.Color(255, 0, 0));
-        rdo_lock.setText("Khóa");
+        rdo_activeGroup.add(rdo_active);
+        rdo_active.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        rdo_active.setForeground(new java.awt.Color(255, 0, 0));
+        rdo_active.setText("Khóa");
 
-        rdo_activeGroup.add(rdo_close);
-        rdo_close.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        rdo_close.setText("Đóng");
+        rdo_activeGroup.add(cbx_active);
+        cbx_active.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        cbx_active.setSelected(true);
+        cbx_active.setText("hoạt động");
 
-        rdo_activeGroup.add(rdo_open);
-        rdo_open.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        rdo_open.setSelected(true);
-        rdo_open.setText("Mở");
+        rdo_activeGroup.add(cbx_active1);
+        cbx_active1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        cbx_active1.setText("không hoạt động");
 
         javax.swing.GroupLayout pnl_infoLayout = new javax.swing.GroupLayout(pnl_info);
         pnl_info.setLayout(pnl_infoLayout);
@@ -240,11 +245,11 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
                                 .addComponent(lbl_textfield2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(lbl_textfield, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
                                 .addComponent(lbl_textfield1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))
-                            .addComponent(rdo_lock)
                             .addGroup(pnl_infoLayout.createSequentialGroup()
-                                .addComponent(rdo_close)
+                                .addComponent(rdo_active)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(rdo_open)))
+                                .addComponent(cbx_active))
+                            .addComponent(cbx_active1, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pnl_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_username)
@@ -253,7 +258,7 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
                             .addComponent(txt_password)
                             .addComponent(txt_name)
                             .addGroup(pnl_infoLayout.createSequentialGroup()
-                                .addComponent(dcs_regTime, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
+                                .addComponent(dcs_regTime, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lbl_textfield5)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -284,11 +289,12 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
                 .addGroup(pnl_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnl_role, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnl_infoLayout.createSequentialGroup()
-                        .addComponent(rdo_lock)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(34, 34, 34)
                         .addGroup(pnl_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rdo_close)
-                            .addComponent(rdo_open))))
+                            .addComponent(rdo_active)
+                            .addComponent(cbx_active))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cbx_active1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnl_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_textfield2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -297,7 +303,7 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
                         .addComponent(lbl_textfield5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(scr_products, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE))
+                .addComponent(scr_products, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))
         );
 
         pnl_infoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {dcs_regTime, lbl_quantity, lbl_textfield, lbl_textfield1, lbl_textfield2, lbl_textfield3, lbl_textfield4, lbl_textfield5, txt_email, txt_name, txt_password, txt_username});
@@ -363,13 +369,13 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         });
         pnl_control.add(btn_next);
 
-        btn_update.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 153, 0)));
+        btn_update.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btn_update.setForeground(new java.awt.Color(255, 204, 51));
         btn_update.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         btn_update.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/loop-arrow.png"))); // NOI18N
         btn_update.setText("Cập nhật");
         btn_update.setToolTipText("password sẽ không được update");
-        btn_update.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btn_update.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 153, 0)));
         btn_update.setIconTextGap(5);
         btn_update.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -468,6 +474,17 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         this.setDetail(new User("your username"));
     }//GEN-LAST:event_btn_clearActionPerformed
 
+    private void txt_usernameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_usernameKeyPressed
+        if (evt.getKeyCode() == 10) {
+            String id = txt_username.getText();
+            User u = DAOModel.USER.getById(id);
+            if (u != null) {
+                this.setDetail(u);
+            } else {
+                lbl_subject.setText("Không tìm thấy " + id);
+            }
+        }
+    }//GEN-LAST:event_txt_usernameKeyPressed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_clear;
@@ -480,6 +497,8 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
     private javax.swing.JLabel btn_previos;
     private javax.swing.JLabel btn_read;
     private javax.swing.JLabel btn_update;
+    private javax.swing.JCheckBox cbx_active;
+    private javax.swing.JCheckBox cbx_active1;
     private com.toedter.calendar.JDateChooser dcs_regTime;
     private javax.swing.JLabel lbl_image;
     private javax.swing.JLabel lbl_quantity;
@@ -494,10 +513,8 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
     private javax.swing.JPanel pnl_img;
     private javax.swing.JPanel pnl_info;
     private javax.swing.JPanel pnl_role;
+    private javax.swing.JRadioButton rdo_active;
     private javax.swing.ButtonGroup rdo_activeGroup;
-    private javax.swing.JRadioButton rdo_close;
-    private javax.swing.JRadioButton rdo_lock;
-    private javax.swing.JRadioButton rdo_open;
     private javax.swing.JScrollPane scr_products;
     private javax.swing.JTextField txt_email;
     private javax.swing.JTextField txt_name;
@@ -509,10 +526,10 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
     private final List<Product> C_PRODUCTS;
     private FileControl fileControl;
     private String dataImg = null;
-    
+
     @Setter
     private frame_ViewControl root;
-    
+
     private void init() {
         this.fileControl = new FileControl(lbl_image, FOLDER, DEFAULT_IMG);
 
@@ -521,11 +538,11 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
             pnl_role.add(new JCheckBox(string));
         });
     }
-    
+
     private void fillProducts() {
         int size;
         String key = txt_username.getText();
-        
+
         if (key != null && !key.isEmpty()) {
             List data = FilterProduct.getR_BY(C_PRODUCTS, FilterProduct.R_BY.USER, key);
             JTable table = Product.table(data);
@@ -537,12 +554,12 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
             this.lbl_quantity.setText("chưa tải");
         }
     }
-    
+
     private void crud(frame_ViewControl.C_TYPE type) {
         try {
             String key = txt_username.getText();
             User e = this.getFormData();
-            
+
             switch (type) {
                 case READ:
                     root.crud(type, key);
@@ -553,13 +570,21 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
                     }
                     break;
                 case UPDATE: // avoid update password
-                    if (checkForm(e) && DAOModel.USER.updateLessPass(e) != null) {
-                        dataImg = fileControl.update(dataImg) ? e.getImage() : null;
-                        root.mes(e, type, true);
-                        root.updateRow(e);
-                        root.navigator(frame_ViewControl.N_TYPE.DEFAULT);
-                    } else {
-                        root.mes(e, type, false);
+                    if (Message.confirm(
+                            this,
+                            "Cập nhập người dùng: " + e.toString(),
+                            "UPDATE USER AVOID PASSWORD",
+                            Message.CF_TYPE.YES_NO
+                    ) == 0) {
+                        if (checkForm(e)
+                                && DAOModel.USER.updateLessPass(e) != null) {
+                            dataImg = fileControl.update(dataImg) ? e.getImage() : null;
+                            root.mes(e, type, true);
+                            root.updateRow(e);
+                            root.navigator(frame_ViewControl.N_TYPE.DEFAULT);
+                        } else {
+                            root.mes(e, type, false);
+                        }
                     }
                     break;
                 case DELETE: // get old image'name before delete data
@@ -576,7 +601,7 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
             Message.alert(this, mes, mes, Message.TYPE.ERROR);
         }
     }
-    
+
     @Override
     public void setDetail(User e) {
         if (e == null) {
@@ -588,13 +613,13 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
 
         // SET ALL INFO
         if (active < 0) {
-            rdo_lock.setSelected(true);
-        } else if (active == 0) {
-            rdo_close.setSelected(true);
+            rdo_active.setSelected(true);
+        } else if(active == 1) {
+            cbx_active.setSelected(true);
         } else {
-            rdo_open.setSelected(true);
+            cbx_active1.setSelected(true);
         }
-        
+
         this.txt_username.setText(e.getUsername());
         this.txt_email.setText(e.getEmail());
         this.txt_name.setText(e.getName());
@@ -608,7 +633,7 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         this.txt_password.setToolTipText(e.getPassword());
         this.fillProducts(); // fill list product of account's username
     }
-    
+
     @Override
     public void showDialogDetail(User u) {
         String key = u.getUsername();
@@ -619,7 +644,7 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
             System.out.println(">>> key : " + key);
         }
     }
-    
+
     private void setSelectedRoles(String... roles) {
         Component[] checkRoles = this.pnl_role.getComponents();
         int i = 0, size = roles.length;
@@ -646,7 +671,7 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
             }
         }
     }
-    
+
     private String[] getSelectedRoles() {
         Component[] checkRoles = this.pnl_role.getComponents();
         ArrayList<String> list = new ArrayList<>(checkRoles.length);
@@ -658,28 +683,28 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
                 }
             }
         }
-        
+
         return list.toArray(new String[0]);
     }
-    
+
     private User getFormData() {
         String username = txt_username.getText();
         String password = txt_password.getText();
         String name = txt_name.getText();
         String email = txt_email.getText();
-        int active = rdo_close.isSelected() ? -1 : rdo_close.isSelected() ? 0 : 1;
+        int active = rdo_active.isSelected() ? -1 : cbx_active.isSelected() ? 1 : 0;
         Date regTime = dcs_regTime.getDate();
         String image = lbl_image.getText();
         String[] roles = this.getSelectedRoles();
-        
+
         return new User(username, password, email, name, active, image, regTime, roles);
     }
-    
+
     private boolean checkForm(User e) {
-        
+
         return true;
     }
-    
+
     private void showImage(String fileName) {
         dataImg = fileName;
         String pathImg = Lib.getFile(FOLDER, fileName, DEFAULT_IMG).toString();
