@@ -121,7 +121,7 @@
 					<textElement textAlignment="Center">
 						<font fontName="Times New Roman" size="18" isItalic="true"/>
 					</textElement>
-					<textFieldExpression><![CDATA["is active: " + $P{d_entity}.isActive()]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$P{d_entity}.getActive()==0 ? "ĐÓNG" : $P{d_entity}.getActive()>0 ? "MỞ" : "KHÓA" ]]></textFieldExpression>
 				</textField>
 			</elementGroup>
 			<rectangle radius="20">
