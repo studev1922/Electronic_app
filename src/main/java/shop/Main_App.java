@@ -1,10 +1,5 @@
 package shop;
 
-import java.io.IOException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.Scanner;
-import shop.configuration.env;
 import shop.services.staticControl.ViewControl;
 
 /**
