@@ -27,7 +27,7 @@
 
 **VIDEO INSTRUCTION AT THE BOTTOM**
 ## DEMO ELECTRONIC APPLICATION
-[![](https://img.youtube.com/vi/mmp9BAuZ1Xk/maxresdefault.jpg)](https://youtu.be/mmp9BAuZ1Xk)
+await for me
 <hr>
 
 ## GUIDE
@@ -153,4 +153,4 @@ mvn exec:java
 </table>
 
 ## INSTRUCTION
-wait for me
+[![](https://img.youtube.com/vi/mmp9BAuZ1Xk/maxresdefault.jpg)](https://youtu.be/mmp9BAuZ1Xk)
