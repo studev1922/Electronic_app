@@ -27,7 +27,7 @@
 
 **VIDEO INSTRUCTION AT THE BOTTOM**
 ## DEMO ELECTRONIC APPLICATION
-wait for me
+[![](https://img.youtube.com/vi/mmp9BAuZ1Xk/maxresdefault.jpg)](https://youtu.be/mmp9BAuZ1Xk)
 <hr>
 
 ## GUIDE
