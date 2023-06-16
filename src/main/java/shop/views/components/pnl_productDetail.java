@@ -13,6 +13,7 @@ import shop.models.dao.*;
 import shop.models.entities.*;
 import shop.services.sql.DAOModel;
 import shop.services.staticControl.DetailControl;
+import shop.services.staticControl.FilterUser;
 import shop.services.staticControl.Lib;
 import shop.services.staticControl.Message;
 import shop.services.staticControl.View;
@@ -21,12 +22,12 @@ import shop.views.windows.dlg_detailProduct;
 import shop.views.windows.frame_ViewControl;
 
 public class pnl_productDetail extends javax.swing.JPanel implements DetailControl<Product> {
-
+    
     public pnl_productDetail() {
         initComponents();
         this.init();
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -405,7 +406,7 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
         Product entity = this.getFormData();
         Object oCate = cbx_cate.getSelectedItem();
         Object oUser = cbx_user.getSelectedItem();
-
+        
         root.getExportControl().jaspertReportDetail(entity, oCate, oUser);
     }//GEN-LAST:event_btn_export_excelActionPerformed
 
@@ -450,27 +451,28 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
     private static final UserDAO udao = DAOModel.USER;
     private FileControl fileControl;
     private String dataImg = null;
-
+    
     @Setter
     private frame_ViewControl root;
-
+    
     private void init() {
         this.fileControl = new FileControl(lbl_image, FOLDER, DEFAULT_IMG);
-
+        
         cbx_cate.removeAll();
         cbx_user.removeAll();
         // fill all comboboxes
         cdao.getMap().forEach((k, e) -> cbx_cate.addItem(e));
-        udao.getMap().forEach((k, e) -> cbx_user.addItem(e));
+        FilterUser.listAccess(AuthAccess.ROLE.SELLER)
+                .forEach(e -> cbx_user.addItem(e));
         // access control
         this.authControl();
     }
-
+    
     void crud(frame_ViewControl.C_TYPE type) {
         try {
             Long key = Long.valueOf(txt_id.getValue());
             Product e = this.getFormData();
-
+            
             switch (type) {
                 case READ:
                     root.crud(type, key);
@@ -478,6 +480,7 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
                 case INSERT:
                     if (checkForm(e) && root.crud(type, e)) {
                         fileControl.save();
+                        root.navigator(frame_ViewControl.N_TYPE.LAST);
                     }
                     break;
                 case UPDATE:
@@ -517,16 +520,16 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
             Message.alert(this, mes, mes, Message.TYPE.ERROR);
         }
     }
-
+    
     @Override
     public void setDetail(Product e) {
         if (e == null) {
             e = new Product();
         }
-
+        
         Category cate = e.getCg_id() == null ? null : cdao.getById(e.getCg_id());
         User user = e.getU_id() == null ? null : udao.getById(e.getU_id());
-
+        
         this.showImage(e.getImage());
         this.lbl_subject.setText(e.toString2());
         this.txt_id.setValue((int) e.getPrid());
@@ -536,12 +539,12 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
         this.txt_price.setValue((int) e.getPrice());
         this.txt_quantity.setValue(e.getQuantity());
         this.dcs_regTime.setDate(e.getRegTime());
-
+        
         this.cbx_cate.setSelectedItem(cate);
         this.cbx_user.setSelectedItem(user);
-
+        
     }
-
+    
     @Override
     public void showDialogDetail(Product p) {
         new dlg_detailProduct(
@@ -550,12 +553,12 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
                 (User) cbx_user.getSelectedItem()
         ).setVisible(true);
     }
-
+    
     private void softDelete(Product e, boolean removeRow) {
         if (e == null) {
             return;
         }
-
+        
         Long key = e.getKey();
         if (DAOModel.PRODUCT.setActive(-1, key)) { // soft-delete
             if (removeRow) {
@@ -571,7 +574,7 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
             this.setDetail(new Product()); // clear form
         }
     }
-
+    
     private Product getFormData() {
         Long prid = Long.valueOf(txt_id.getValue());
         String name = txt_name.getText();
@@ -583,13 +586,13 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
         String image = lbl_image.getText();
         Integer cg_id = ((Category) cbx_cate.getSelectedItem()).getCgid();
         String u_id = ((User) cbx_user.getSelectedItem()).getUsername();
-
+        
         return new Product(prid, name, note, active, price, quantity, regTime, image, cg_id, u_id);
     }
-
+    
     private void authControl() {
         boolean isAdmin = security.hasAnyRoles(AuthAccess.ROLE.ADMIN);
-
+        
         cb_isCheck.setToolTipText("Chờ admin duyệt sản phẩm!");
         cb_isCheck.setEnabled(isAdmin);
         cbx_user.setEnabled(isAdmin);
@@ -597,12 +600,12 @@ public class pnl_productDetail extends javax.swing.JPanel implements DetailContr
             cbx_user.setSelectedItem(security.getUser());
         }
     }
-
+    
     private boolean checkForm(Product e) {
-
+        
         return true;
     }
-
+    
     private void showImage(String fileName) {
         dataImg = fileName;
         String pathImg = Lib.getFile(FOLDER, fileName, DEFAULT_IMG).toString();

@@ -48,13 +48,12 @@ public interface FilterProduct {
                 .contains(val) && e.getActive() == active)
                 .collect(Collectors.toList());
     }
-    
-    
+
     public static List<Product> listAccess() {
         Collection<Product> values = DAOModel.PRODUCT.getMap().values();
-        return values.stream().filter(e -> e.getActive()>-1).collect(Collectors.toList());
+        return values.stream().filter(e -> e.getActive() > -1).collect(Collectors.toList());
     }
-    
+
     public static List<Product> listAccess(int access) {
         Collection<Product> values = DAOModel.PRODUCT.getMap().values();
         Predicate<Product> predicate = e -> e.getActive() == access;
@@ -63,7 +62,7 @@ public interface FilterProduct {
 
     public static List<Product> listActive() {
         Collection<Product> values = DAOModel.PRODUCT.getMap().values();
-        return values.stream().filter(e -> e.getActive()>0).collect(Collectors.toList());
+        return values.stream().filter(e -> e.getActive() > 0).collect(Collectors.toList());
     }
 
     /**
@@ -86,7 +85,7 @@ public interface FilterProduct {
         }
         return list.stream().filter(predicate).collect(Collectors.toList());
     }
-    
+
     /**
      * @param list input data to filter
      * @param getBy filter by references column
@@ -98,10 +97,10 @@ public interface FilterProduct {
         Predicate<Product> predicate = null;
         switch (getBy) {
             case USER:
-                predicate = e -> byValue.equals(e.getU_id()) && e.getActive()>-1 == access;
+                predicate = e -> byValue.equals(e.getU_id()) && e.getActive() > -1 == access;
                 break;
             case CATEGORY:
-                predicate = e -> byValue.equals(e.getCg_id()) && e.getActive()>-1 == access;
+                predicate = e -> byValue.equals(e.getCg_id()) && e.getActive() > -1 == access;
                 break;
         }
         return list.stream().filter(predicate).collect(Collectors.toList());
@@ -146,12 +145,17 @@ public interface FilterProduct {
     public static Date[] getMinMaxTime(Collection<Product> list) {
         Date[] range = {new Date(), new Date()};
         list.forEach(e -> {
+            Date regTime = e.getRegTime();
+            if (regTime == null) {
+                regTime = new Date();
+            }
+
             long min = range[0].getTime(), max = range[1].getTime();
-            long nextAt = e.getRegTime().getTime();
+            long nextAt = regTime.getTime();
             if (nextAt < min) {
-                range[0] = e.getRegTime();
+                range[0] = regTime;
             } else if (nextAt > max) {
-                range[1] = e.getRegTime();
+                range[1] = regTime;
             }
         });
 

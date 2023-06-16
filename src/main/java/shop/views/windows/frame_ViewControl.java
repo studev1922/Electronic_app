@@ -286,7 +286,6 @@ public class frame_ViewControl<K, E> extends javax.swing.JFrame {
                 isSuccess = (entity = this.dao.insert(entity)) != null;
                 if (isSuccess) { // show new data inserted
                     EntityControl<K> e = (EntityControl<K>) entity;
-                    this.navigator(N_TYPE.LAST);
                     this.insertRow(e);
                 }
                 break;
