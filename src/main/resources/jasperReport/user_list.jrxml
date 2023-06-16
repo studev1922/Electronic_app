@@ -325,7 +325,7 @@
 								<textElement textAlignment="Center" verticalAlignment="Middle">
 									<font fontName="Times New Roman" size="14"/>
 								</textElement>
-								<textFieldExpression><![CDATA[$F{roles}]]></textFieldExpression>
+								<textFieldExpression><![CDATA[$F{password}]]></textFieldExpression>
 							</textField>
 						</jr:detailCell>
 					</jr:column>
@@ -345,7 +345,7 @@
 								<textElement textAlignment="Center" verticalAlignment="Middle">
 									<font fontName="Times New Roman" size="14"/>
 								</textElement>
-								<textFieldExpression><![CDATA[$F{image}]]></textFieldExpression>
+								<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
 							</textField>
 						</jr:detailCell>
 					</jr:column>
@@ -385,7 +385,7 @@
 								<textElement textAlignment="Center" verticalAlignment="Middle">
 									<font fontName="Times New Roman" size="14"/>
 								</textElement>
-								<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+								<textFieldExpression><![CDATA[$F{image}]]></textFieldExpression>
 							</textField>
 						</jr:detailCell>
 					</jr:column>
@@ -405,7 +405,7 @@
 								<textElement textAlignment="Center" verticalAlignment="Middle">
 									<font fontName="Times New Roman" size="14"/>
 								</textElement>
-								<textFieldExpression><![CDATA[$F{password}]]></textFieldExpression>
+								<textFieldExpression><![CDATA[$F{roles}]]></textFieldExpression>
 							</textField>
 						</jr:detailCell>
 					</jr:column>

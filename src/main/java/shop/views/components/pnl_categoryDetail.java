@@ -372,6 +372,7 @@ public class pnl_categoryDetail extends javax.swing.JPanel implements DetailCont
 
     private void btn_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clearActionPerformed
         this.setDetail(new Category());
+        this.fileControl.clear();
     }//GEN-LAST:event_btn_clearActionPerformed
 
     private void txt_idKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_idKeyPressed

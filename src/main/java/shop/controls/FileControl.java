@@ -31,6 +31,10 @@ public class FileControl {
     @Getter
     private File file;
     // public boolean isSetFile = false;
+    
+    public void clear() {
+        this.file = null;
+    }
 
     public FileControl(JLabel lbl_image, Config.folder folder, String default_img) {
         Dimension s = lbl_image.getSize();

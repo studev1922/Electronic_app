@@ -472,6 +472,7 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
 
     private void btn_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clearActionPerformed
         this.setDetail(new User("your username"));
+        this.fileControl.clear();
     }//GEN-LAST:event_btn_clearActionPerformed
 
     private void txt_usernameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_usernameKeyPressed
@@ -614,7 +615,7 @@ public class pnl_userDetail extends javax.swing.JPanel implements DetailControl<
         // SET ALL INFO
         if (active < 0) {
             rdo_active.setSelected(true);
-        } else if(active == 1) {
+        } else if (active == 1) {
             cbx_active.setSelected(true);
         } else {
             cbx_active1.setSelected(true);
