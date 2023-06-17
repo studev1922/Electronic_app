@@ -1,6 +1,5 @@
 package shop;
 
-import java.sql.SQLException;
 import shop.services.staticControl.ViewControl;
 
 /**
@@ -20,7 +19,7 @@ public class Main_App {
     }
 
     // UIManager.LookAndFeelInfo
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
         Main_App.onLoadDisplay(); // load display components;
     }
 }
