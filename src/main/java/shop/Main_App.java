@@ -21,7 +21,6 @@ public class Main_App {
 
     // UIManager.LookAndFeelInfo
     public static void main(String[] args) throws SQLException {
-        shop.configuration.security.login("admin", "admin");
         Main_App.onLoadDisplay(); // load display components;
     }
 }
