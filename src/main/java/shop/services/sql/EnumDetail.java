@@ -1,5 +1,6 @@
 package shop.services.sql;
 
+import java.io.File;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Collection;
@@ -9,9 +10,12 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import shop.configuration.Config;
+import shop.configuration.env;
 import shop.models.entities.Product;
 import static shop.services.sql.SqlOrder.KEY;
 import shop.services.staticControl.EntityControl;
+import shop.services.staticControl.Lib;
 import shop.services.staticControl.Query;
 import shop.utils.Format;
 
@@ -65,6 +69,8 @@ public enum EnumDetail implements suport {
             Class[] types = {Long.class, Integer.class, String.class, String.class, Product.class};
             boolean[] edits = {false, false, false, false, false};
             Detail d;
+            File f;
+            Product p, p1;
 
             // prepare data
             Object[][] rows = null;
@@ -73,11 +79,18 @@ public enum EnumDetail implements suport {
                 rows = new Object[data.size()][columns.length];
                 for (Iterator<Detail> e = data.iterator(); e.hasNext(); ++i) {
                     d = e.next();
+                    p = DAOModel.PRODUCT.getById(d.pr_id);
+                    p1 = new Product();
+                    f = Lib.getFileCanRead(Config.folder.product, p.getImage());
+                    p1.setImage(f==null ? env.DEFAULT_IMG : p.getImage());
+                    p1.setName(p.getName());
+                    p1.setPrid(p.getPrid());
+
                     rows[i] = new Object[]{
                         d.or_id, d.quantity,
                         Format.number(null, d.oldPrice),
                         Format.number(null, d.quantity * d.oldPrice),
-                        DAOModel.PRODUCT.getById(d.pr_id)
+                        p1
                     };
                 }
             }
