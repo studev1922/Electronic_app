@@ -27,8 +27,7 @@
 
 **VIDEO INSTRUCTION AT THE BOTTOM**
 ## DEMO ELECTRONIC APPLICATION
-[![demo video](https://img.youtube.com/vi/YGL7HjjtuMY/hqdefault.jpg)](https://youtu.be/YGL7HjjtuMY)
-
+[![demo video](https://img.youtube.com/vi/YGL7HjjtuMY/maxresdefault.jpg)](https://youtu.be/YGL7HjjtuMY)
 <hr>
 
 ## GUIDE
