@@ -1,4 +1,8 @@
 # ELECTRONIC APP
+a similar version [shop_Vegetables](https://drive.google.com/drive/folders/1YrOzLRMSYkYVo3QTzbe3zwXb7KfP2tah?usp=sharing)
+- shop_Vegetables is upgraded from Electronic_app, shop_Vegetables is updated with more date information
+- shop_Vegetables has revised the display interface
+ 
 [Download file demo at here](https://drive.google.com/file/d/11TR08JJ5rYFb3iSyfKjA-5WtS3zpnoyU/view?usp=drive_link)<br>
 [Click here to see other versions on the google drive](https://drive.google.com/drive/folders/1RkALUwLSTMoA4nPC_sMRUAPenY71RujG?usp=sharing)
 
